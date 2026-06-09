@@ -11,6 +11,12 @@ import { FaLaptop } from "react-icons/fa";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { LuBookAudio } from "react-icons/lu";
 import Compustab from "./Campustab";
+import { FaTwitter } from "react-icons/fa";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { GrLocation } from "react-icons/gr";
+
+import Feedswiper from "./Feedswiper";
+
 
 
 
@@ -207,7 +213,7 @@ return(
 
     <div className="text-center h-[100px] w-full"> 
             <p className="text-lg font-semibold text-orange-500 "> Popular Categories </p>
-            <h1 className="mt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Course Categories</h1>
+            <h1 className="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Course Categories</h1>
     </div>
 
     <div className="w-[90%] ml-15 mt-10">
@@ -613,16 +619,337 @@ return(
 
 
 
-        <div className="w-full text-center mt-18 h-[150px]">
-            <p className="text-lg font-semibold text-orange-600 "> Photo & Album </p>
-            <h1 className="mt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Campus Gallery</h1>
+    <div className="w-full text-center mt-18 h-[150px]">
+        <p className="text-lg font-semibold text-orange-600 "> Photo & Album </p>
+        <h1 className="mt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Campus Gallery</h1>
+     </div>
+
+
+
+
+
+
+    <div className="mb-20">
+            <Compustab/>
+    </div>
+
+
+
+
+
+
+    <div className="bg-sky-100 w-full h-[700px] pt-[80px]">
+
+      <div className="text-center h-[100px] w-full"> 
+            <p className="text-lg font-semibold text-orange-500 "> Team Members </p>
+            <h1 className="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Expert Instructors</h1>
+      </div>
+
+      
+
+     <div className= "w-[95%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8">  
+
+      <div className="team-member">
+
+        <div className="team-img group">
+          <img src="/team1.avif" alt="" />
+
+          <div className="plus-btn">+</div>
+      
+          <div className="social-icons">
+            <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
+
+            <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
+            <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
+
+          </div>
+
+        </div>
+
+        <div className="bg-white p-5 h-[200px]">
+            <h1 className="text-2xl font-bold text-[#062a35]">Ravi Sharma</h1>
+            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Math Teacher</p>
+
+          <span className="flex items-center gap-2 mt-3">
+              <LuBookAudio className="text-orange-500 text-sm"/>
+              <p className="text-sm text-gray-500">750 + Course</p>
+          </span> 
+        </div>
+
+      </div>
+
+
+      <div className="team-member">
+
+        <div className="team-img group">
+          <img src="/team4.avif" alt="" />
+
+          <div className="plus-btn">+</div>
+      
+          <div className="social-icons">
+            <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
+
+            <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
+            <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
+
+          </div>
+
+        </div>
+
+        <div className="bg-white p-5 h-[200px]">
+            <h1 className="text-2xl font-bold text-[#062a35]">Ridhima sharma</h1>
+            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Math Teacher</p>
+
+          <span className="flex items-center gap-2 mt-3">
+              <LuBookAudio className="text-orange-500 text-sm"/>
+              <p className="text-sm text-gray-500">750 + Course</p>
+          </span> 
+        </div>
+
+      </div>
+
+
+      <div className="team-member">
+
+        <div className="team-img group">
+          <img src="/team3.avif" alt="" />
+
+          <div className="plus-btn">+</div>
+      
+          <div className="social-icons">
+            <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
+
+            <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
+            <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
+
+          </div>
+
+        </div>
+
+        <div className="bg-white p-5 h-[200px]">
+            <h1 className="text-2xl font-bold text-[#062a35]">Ajay yadav</h1>
+            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Computer Teacher</p>
+
+          <span className="flex items-center gap-2 mt-3">
+              <LuBookAudio className="text-orange-500 text-sm"/>
+              <p className="text-sm text-gray-500">700 + Course</p>
+          </span> 
+        </div>
+
+      </div>
+
+
+
+      <div className="team-member">
+
+        <div className="team-img group">
+          <img src="/team2.avif" alt="" />
+
+          <div className="plus-btn">+</div>
+      
+          <div className="social-icons">
+            <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
+
+            <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
+            <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
+
+          </div>
+
+        </div>
+
+        <div className="bg-white p-5 h-[200px]">
+            <h1 className="text-2xl font-bold text-[#062a35]">Aaditay sharma</h1>
+            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">English Teacher</p>
+
+          <span className="flex items-center gap-2 mt-3">
+              <LuBookAudio className="text-orange-500 text-sm"/>
+              <p className="text-sm text-gray-500">590 + Course</p>
+          </span> 
+        </div>
+
+      </div>
+
+  </div>
+
+  </div>
+
+
+
+
+    <div className="text-center h-[100px] w-full mt-20"> 
+            <p className="text-lg font-semibold text-orange-500 "> Latest Events </p>
+            <h1 className="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Upcoming Events</h1>
+    </div>
+
+
+
+
+  <div className= "w-[95%] flex items-center justify-center  mx-auto mt-8 gap-8">  
+
+    <div className="w-[60%] event-card">
+
+        <div className="overflow-hidden">
+         <img src="/event1.jpg"alt="" className="w-full block h-[400px] object-cover transition-transform duration-500" />
+            
+       </div>
+
+      <div className="w-full bg-sky-100 h-[300px] p-10">
+
+        <div className="flex gap-5 items-center">
+          <span className="flex items-center gap-2">
+              <FaRegCalendarAlt className="text-orange-500"/>
+              <p className="text-md text-gray-500 font-400">30 MAY 2026</p>    
+          </span> 
+
+          <span className="flex items-center gap-2">
+              <FaRegCalendarAlt className="text-orange-500"/>
+              <p className="text-md text-gray-500 font-400">8AM - 9PM</p>    
+          </span> 
+
+          <span className="flex items-center gap-2">
+              <GrLocation  className="text-orange-500"/>
+              <p className="text-md text-gray-500 font-400">Jaipur,Rajasthan</p>    
+          </span> 
+        </div>
+
+        <h1 className="text-2xl font-bold text-[#062a35] hover:text-orange-500 cursor-pointer duration-200 pt-4">Web Design & Development Conference 2026</h1>
+
+        <p className="text-gray-500 text-md pt-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et</p>
+
+        <button className="uparcase h-[50px] w-[180px] bg-orange-500 p-3 font-semibold text-white mt-8 cursor-pointer">join event</button>
+
+      </div>  
+
+    </div>
+
+
+  <div className="w-[30%]">
+
+    <div className="w-full  relative overflow-hidden shadow-lg">
+
+    <img
+    src="/event2.jpg"
+    alt=""
+    className="w-full h-[350px] object-cover"
+    />
+
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/40"></div>
+
+    <div className="absolute top-5 right-5 bg-orange-500 text-white w-[70px] h-[70px] flex items-center justify-center rounded-full text-xl font-bold">
+    $20
+   </div>
+  
+    <div className="absolute text-white bottom-5 left-5">
+      <div className="flex items-center gap-4 mb-3">
+        <span className="flex items-center gap-2">
+            <FaRegCalendarAlt className="text-orange-500"/>
+            <p className="text-md  font-400">30 MAY 2026</p>    
+        </span> 
+
+         <span className="flex items-center gap-2">
+            <FaRegCalendarAlt className="text-orange-500"/>
+            <p className="text-md  font-400">8AM - 9PM</p>    
+        </span>
+      </div>
+
+      <h1 className="font-bold text-xl hover:text-orange-500 cursor-pointer duration-200 ">Annual Conference 2020</h1>
+
+      <button className=" font-semibold text-white mt-4 cursor-pointer">join event-- </button>
+
+    </div>
+
+  </div>
+
+
+
+  <div className="w-full  relative overflow-hidden shadow-lg mt-5">
+
+    <img
+    src="/event3.jpg"
+    alt=""
+    className="w-full h-[350px] object-cover"
+    />
+
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/40"></div>
+
+    <div className="absolute top-5 right-5 bg-orange-500 text-white w-[70px] h-[70px] flex items-center justify-center rounded-full text-xl font-bold">
+    $20
+   </div>
+  
+    <div className="absolute text-white bottom-5 left-5">
+      <div className="flex items-center gap-4 mb-3">
+        <span className="flex items-center gap-2">
+            <FaRegCalendarAlt className="text-orange-500"/>
+            <p className="text-md  font-400">30 MAY 2026</p>    
+        </span> 
+
+         <span className="flex items-center gap-2">
+            <FaRegCalendarAlt className="text-orange-500"/>
+            <p className="text-md  font-400">8AM - 9PM</p>    
+        </span>
+      </div>
+
+      <h1 className="font-bold text-xl hover:text-orange-500 cursor-pointer duration-200 ">Annual Conference 2020</h1>
+
+      <button className=" font-semibold text-white mt-4 cursor-pointer">join event-- </button>
+
+    </div>
+
+    </div>
+
+   </div>
+
+</div>
+
+        <div className="w-full h-[250px] items-center justify-center flex">
+            <button className=" text-md h-[50px] w-[180px]  p-3 hover:font-semibold text-sky-800 mt-8 cursor-pointer hover:bg-orange-500 hover:text-white border border-gray-400 duration-600">VIEW ALL EVENTS</button>
         </div>
 
 
 
-      <div>
-            <Compustab/>
+
+    <div className="stu-feedback pt-20">
+
+      <div className="text-center h-[100px] w-full"> 
+            <p className="text-lg font-semibold text-white "> Students Feedback   </p>
+            <h1 className="pt-2 text-5xl font-bold text-white tracking-wide ">What Our Students Say</h1>
+      </div> 
+
+
+      <div className="w-[95%] flex mt-8 gap-8">
+        
+        <div className="w-[55%]">
+            <Feedswiper/>
+        </div>
+
+        <div className="w-[40%] pl-5">
+          <img src="/feed2.png" alt="" />
+        </div>
+
       </div>
+
+    </div>  
+
+
+    <div className="w-full h-[800px] bg-sky-100 p-15 flex gap-5">
+
+      <div className="w-[50%]">
+          <img src="/instruck.png" alt="" />
+      </div>
+
+    <div className="w-[40%]">
+      <p className="text-md text-orange-600 font-bold"> Build A Career</p>
+      <h1 className="text-5xl font-bold  text-[#062a35] pt-4">Become an Instructor</h1>
+      <p className="text-gray-500 text-md pt-4">Sed ut perspiciati unde omnis iste natus error sit voluptatem accusanc tium doloremque laudantium, totam rem aperiam, eaque ipsa quae abillo inventore veritatis et quasi architecto beatae vitae dicta sun</p>
+
+
+      <div>
+        
+      </div>
+
+    </div> 
+
+    </div>
 
 
 
