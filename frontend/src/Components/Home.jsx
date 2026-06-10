@@ -16,7 +16,14 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { GrLocation } from "react-icons/gr";
 
 import Feedswiper from "./Feedswiper";
+import { PiSuitcaseSimple } from "react-icons/pi";
+import { LuBookUser } from "react-icons/lu";
+import { FaRegComments } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
 
+import Imgswiper from "./Imgswiper";
+
+import Footer from "./Footer";
 
 
 
@@ -931,27 +938,168 @@ return(
     </div>  
 
 
-    <div className="w-full h-[800px] bg-sky-100 p-15 flex gap-5">
+    <div className="w-full h-[700px] bg-sky-100 p-15 flex justify-between">
 
       <div className="w-[50%]">
           <img src="/instruck.png" alt="" />
       </div>
 
-    <div className="w-[40%]">
+    <div className="w-[43%] mt-10">
       <p className="text-md text-orange-600 font-bold"> Build A Career</p>
       <h1 className="text-5xl font-bold  text-[#062a35] pt-4">Become an Instructor</h1>
       <p className="text-gray-500 text-md pt-4">Sed ut perspiciati unde omnis iste natus error sit voluptatem accusanc tium doloremque laudantium, totam rem aperiam, eaque ipsa quae abillo inventore veritatis et quasi architecto beatae vitae dicta sun</p>
 
 
-      <div>
-        
+      <div className="w-full flex items-center justify-between mt-8">
+        <div className="w-[50%] border-r border-r-gray-400">
+          <PiSuitcaseSimple  className="text-6xl text-orange-600"/>
+
+          <p className=" text-[#062a35] text-xl font-bold pt-2">Digitalization</p>  
+          <p className="text-gray-500 text-md pt-2">Sed ut perspia unde omnis aste natus error sit volu</p>
+        </div>
+
+         <div className="w-[40%]">
+          <LuBookUser className="text-6xl text-orange-600"/>
+
+          <p className=" text-[#062a35] text-xl font-bold pt-2">Book Friendly</p>  
+          <p className="text-gray-500 text-md pt-2">Sed ut perspia unde omnis aste natus error sit volu</p>
+        </div>
+
       </div>
+
+          <div className="flex itmes-center gap-5 mt-8"> 
+            <button class=" h-[50px] w-[180px] bg-orange-600 p-3 font-semibold text-white mt-8 cursor-pointer hover:bg-[#062a35] duration-400">JOIN WITH US</button>
+
+            <button class=" h-[50px] w-[180px] bg-white hover:bg-orange-500 p-3 font-semibold text-[#062a35] hover:text-white mt-8 cursor-pointer duration-400 text-sm">BECOME A PARTNER</button>
+          </div>  
 
     </div> 
 
     </div>
 
 
+    <div class="text-center h-[100px] w-full mt-20">
+    <p class="text-lg font-semibold text-orange-500 "> Artices & Tipes </p>
+    <h1 class="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Latest News & Blog</h1>
+    </div>
+
+
+    <div className="w-[100%] h-[750px] flex items-center gap-8 justify-center mt-8">
+
+      <div className="w-[28%] "> 
+
+        <img src="/bimg3.jpg"  class="hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
+
+        <div className="border border-gray-300">
+
+          <div className="flex items-center gap-4 pl-7 pt-4">
+           <div className="flex items-center gap-3">
+              <FaRegCalendarAlt className="text-orange-500 text-xl"/>
+              <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
+           </div>
+
+           <div className="flex items-center gap-3">
+              <FaRegComments className="text-orange-500 text-xl"/>
+              <p className="text-md font-semibold text-gray-500">COM(30)</p>
+           </div>
+          </div>
+
+          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Learning Resources In Challenec Times Online Workshops</h2>
+
+          <div className="flex items-center gap-3 pl-7 mt-5">
+             <img src="/g.png" alt="" /> 
+             <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
+          </div>
+
+          <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
+          </button>
+
+        </div>
+
+      </div>
+
+
+       <div className="w-[28%] "> 
+
+        <img src="/bimg2.jpg"  class="hover:-translate-y-2 transition-all duration-300 object-cover cursor-pointer"/>
+
+        <div className="border border-gray-300">
+
+          <div className="flex items-center gap-4 pl-7 pt-4">
+           <div className="flex items-center gap-3">
+              <FaRegCalendarAlt className="text-orange-500 text-xl"/>
+              <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
+           </div>
+
+           <div className="flex items-center gap-3">
+              <FaRegComments className="text-orange-500 text-xl"/>
+              <p className="text-md font-semibold text-gray-500">COM(30)</p>
+           </div>
+          </div>
+
+          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Djang Models Admin And Harness Rela Tional Database</h2>
+
+          <div className="flex items-center gap-3 pl-7 mt-5">
+             <img src="/g.png" alt="" /> 
+             <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
+          </div>
+
+          <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+       <div className="w-[28%] "> 
+
+        <img src="/bimg1.jpg"  class="hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
+
+        <div className="border border-gray-300">
+
+          <div className="flex items-center gap-4 pl-7 pt-4">
+           <div className="flex items-center gap-3">
+              <FaRegCalendarAlt className="text-orange-500 text-xl"/>
+              <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
+           </div>
+
+           <div className="flex items-center gap-3">
+              <FaRegComments className="text-orange-500 text-xl"/>
+              <p className="text-md font-semibold text-gray-500">COM(30)</p>
+           </div>
+          </div>
+
+          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Smash Podcast With Laura Kalbag What Is Online Privacy</h2>
+
+          <div className="flex items-center gap-3 pl-7 mt-5">
+             <img src="/g.png" alt="" /> 
+             <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
+          </div>
+
+          <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div className=" h-[180px] bg-orange-700 pt-12 pl-12">
+        <Imgswiper/>
+    </div>
+
+
+    <div>
+      <Footer/>
+    </div>
 
     </>
 )
