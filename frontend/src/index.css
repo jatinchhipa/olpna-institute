@@ -11,14 +11,14 @@
 
 
 .course-card{
-    width:28%;
+      width:28%;
       background:#fff;
       border-radius:5px;
       overflow:hidden;
       position:relative;
       transition:0.4s;
       cursor:pointer;
-     
+      border: 1px solid rgba(128, 128, 128, 0.288);
 }
 
 
@@ -302,3 +302,50 @@
   height: 560px;
   background-size: cover;   
 }                                  
+
+
+
+
+
+
+                                   /* course page    */
+
+.course-hero{
+ width: 100%;
+  height: 450px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.644)),
+    url("/coursehero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+
+
+
+
+
+
+                                            /* blog css */
+
+.blog-hero{
+ width: 100%;
+  height: 450px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.644)),
+    url("/blog.jfif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+
+
+
+                                  /* about css */
+
+
+

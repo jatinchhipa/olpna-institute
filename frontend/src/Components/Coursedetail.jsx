@@ -1,0 +1,238 @@
+import React from "react";
+import Navbar from "./Navbar";
+
+import { FaYoutube } from "react-icons/fa";
+import Caccordion from "./Caccordion";
+import { HiOutlineCurrencyDollar } from "react-icons/hi2";
+import { FaDollarSign } from "react-icons/fa6";
+import { IoIosContact } from "react-icons/io";
+import { MdOutlineWatchLater } from "react-icons/md";
+import { FaRegAddressBook } from "react-icons/fa6";
+import { CiFlag1 } from "react-icons/ci";
+import { FaRegCalendarAlt } from "react-icons/fa";
+
+import Footer from "./Footer";
+import Imgswiper from "./Imgswiper";
+
+
+
+
+
+function Coursedetail(){
+    return(
+    <>
+       <Navbar/> 
+
+    <div className="course-hero  flex flex-col justify-center items-center">
+        <h1 className="text-8xl text-white font-bold "> Course Details</h1>  
+        <p className="text-white text-2xl bold ">Home / Courses</p>
+    </div>  
+
+    <div className="w-[90%]  flex ml-20 mt-20 gap-8">
+
+    <div className="w-[65%]">
+
+        <div className="w-full relative">
+        <img src="/cd.jpg" alt="" />    
+        <a href="//www.youtube.com">
+        <FaYoutube className="w-[80px] h-[70px] bg-red-600 text-white  p-5 absolute top-[190px] right-[340px] rounded-xl transition-all duration-500 hover:scale-110"/>
+        </a>
+        </div> 
+
+
+        <div className="w-full items-center mt-10">
+
+          <h1 className="text-3xl font-bold text-[#062a35]">How To Improve Wed Design Skills</h1> 
+
+          <p className="text-[15px] text-gray-500 leading-7 pt-5 text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p> 
+
+          <h1 className="text-3xl font-bold text-[#062a35] pt-8">Curriculum</h1>
+          <p className="text-[15px] text-gray-500 leading-7 pt-5 text-justify">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam</p>
+
+
+          <ul className="mt-5">
+            <a href="/coursedetail">
+            <li className="text-[#062a35] text-sm font-bold pt-5 pb-4 border-t border-t-gray-300 cursor-pointer hover:bg-sky-100 duration-500">Lesson 01: Introduced About Web Design</li>
+            </a>    
+
+            <a href="/coursedetail">
+            <li className="text-[#062a35] text-sm font-bold pt-5 pb-4 border-t border-t-gray-300 cursor-pointer hover:bg-sky-100 duration-500">Lesson 02: What Is UX/UI Design ?</li>
+            </a>
+
+            <a href="/coursedetail">
+            <li className="text-[#062a35] text-sm font-bold pt-5 pb-4 border-t border-t-gray-300 cursor-pointer hover:bg-sky-100 duration-500">Lesson 03:Why Need UX/UI Role In Web Design ?</li>
+            </a>
+
+            <a href="/coursedetail">
+            <li className="text-[#062a35] text-sm font-bold pt-5 pb-4 border-t border-t-gray-300 cursor-pointer hover:bg-sky-100 duration-500">Lesson 04: What Is UX Manager</li>
+            </a>    
+
+            <a href="/coursedetail">
+            <li className="text-[#062a35] text-sm font-bold pt-5 pb-4 border-t border-t-gray-300 cursor-pointer hover:bg-sky-100 duration-500">Lesson 05:What's Your Design Goals ?</li>
+            </a>
+
+          </ul>
+
+
+          <img src="/cd2.jpg" alt="" className="mt-15"/>
+
+
+          <h2 className="text-3xl font-bold text-[#062a35] mt-10">Frequently Asked Questions</h2>
+
+          <p className="text-[15px] text-gray-500 leading-7 pt-5 text-justify">Wuisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam</p>
+
+        </div>
+
+
+        <div className="w-full">
+            <Caccordion/>
+        </div>
+
+
+        <div className="w-full flex flex-wrap mt-10 gap-5">
+            {/* <h1 className="text-3xl font-bold text-[#062a35] ">Course Instructors</h1> */}
+             
+           <div className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
+                <img src="/team1.avif" alt="" className="w-[190px] h-[190px] rounded-full object-cover"/>
+
+                <h1 className="text-xl font-bold text-[#062a35] pt-5">Ravi Sharma</h1>
+                <p className="text-gray-400 text-sm">Math Teacher</p>
+           </div>  
+
+
+
+            <div className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
+                <img src="/team3.avif" alt="" className="w-[190px] h-[190px] rounded-full object-cover"/>
+
+                <h1 className="text-xl font-bold text-[#062a35] pt-5">Ajay Yadav</h1>
+                <p className="text-gray-400 text-sm">Math Teacher</p>
+           </div> 
+
+
+
+            <div className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer ">
+                <img src="/team4.avif" alt="" className="w-[190px] h-[190px] rounded-full object-cover"/>
+
+                <h1 className="text-xl font-bold text-[#062a35] pt-5">Ridhima Sharma</h1>
+                <p className="text-gray-400 text-sm">Math Teacher</p>
+           </div> 
+
+
+
+            <div className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
+                <img src="/team2.avif" alt="" className="w-[190px] h-[190px] rounded-full object-cover"/>
+
+                <h1 className="text-xl font-bold text-[#062a35] pt-5">Aaditay Sharma</h1>
+                <p className="text-gray-400 text-sm">Math Teacher</p>
+           </div> 
+
+        </div>
+
+    </div> 
+
+
+    <div className="w-[30%]">
+
+       <div className="border border-gray-300 h-[650px] p-8 ">
+
+        <div className="flex items-center justify-between mt-5 h-[50px]">
+            <span className="flex items-center gap-1">
+                <HiOutlineCurrencyDollar  className="text-orange-500 text-xl"/>
+                <p className="text-[#062a35] font-semibold text-md">Course Price</p>
+            </span>
+
+            <span className="flex items-center">
+                <FaDollarSign  className="text-orange-500 text-xl"/>
+                <p className="text-orange-500  font-semibold text-md">59</p>
+            </span>
+        </div>   
+         
+
+        <div className="flex items-center justify-between mt-5 h-[50px] border-t border-t-gray-200">
+            <span className="flex items-center gap-1">
+                <IoIosContact className="text-orange-500 text-xl"/>
+                <p className="text-[#062a35] font-semibold text-md">Instructor</p>
+            </span>
+
+                <p className="text-orange-500  font-semibold text-md">Ridhima Shamra</p>
+           
+        </div>
+
+
+        <div className="flex items-center justify-between mt-5 h-[50px] border-t border-t-gray-200">
+            <span className="flex items-center gap-1">
+                <MdOutlineWatchLater   className="text-orange-500 text-xl"/>
+                <p className="text-[#062a35] font-semibold text-md">Duration</p>
+            </span>
+
+                <p className="text-orange-500  font-semibold text-md">360 Hours</p>
+    
+        </div>
+
+        <div className="flex items-center justify-between mt-5 h-[50px] border-t border-t-gray-200" >
+            <span className="flex items-center gap-1">
+                <FaRegAddressBook  className="text-orange-500 text-xl"/>
+                <p className="text-[#062a35] font-semibold text-md">Lectures</p>
+            </span>
+
+                <p className="text-orange-500  font-semibold text-md">20 Lessons</p>
+           
+        </div>
+
+        <div className="flex items-center justify-between mt-5 h-[50px] border-t border-t-gray-200">
+            <span className="flex items-center gap-1">
+                <IoIosContact className="text-orange-500 text-xl"/>
+                <p className="text-[#062a35] font-semibold text-md">Enrolled</p>
+            </span>
+           
+                <p className="text-orange-500  font-semibold text-md">1000 Students</p>
+           
+        </div>
+
+        <div className="flex items-center justify-between mt-5 h-[50px] border-t border-t-gray-200">
+            <span className="flex items-center gap-1">
+                <CiFlag1  className="text-orange-500 text-xl"/>
+                <p className="text-[#062a35] font-semibold text-md">Language</p>
+            </span>
+
+                <p className="text-orange-500  font-semibold text-md">English</p>
+        </div>
+
+        <div className="flex items-center justify-between mt-5 h-[50px] border-t border-t-gray-200">
+            <span className="flex items-center gap-1">              
+                <FaRegCalendarAlt  className="text-orange-500 text-xl"/>
+                <p className="text-[#062a35] font-semibold text-md">Deadline</p>
+            </span>
+         
+                <p className="text-orange-500  font-semibold text-md">27 july 2026</p>         
+        </div> 
+
+
+            <button className="w-[210px] h-[55px] bg-sky-600 text-white font-semibold rounded-full ml-10 mt-10 cursor-pointer hover:bg-orange-500 duration-300">ENROLLED NOW</button>
+
+       </div>  
+
+
+        <div className="w-full mt-15">
+            <img src="/cd3.jpg" alt=""  className="object-cover"/>
+        </div>
+
+    </div>    
+
+</div>
+
+          
+        
+    <div className="mt-20 h-[180px] bg-orange-700 pt-12 pl-12">
+        <Imgswiper/>
+    </div>  
+
+
+<Footer/>
+
+
+    </>
+    )
+}
+
+export default Coursedetail;

@@ -25,6 +25,7 @@ import Imgswiper from "./Imgswiper";
 
 import Footer from "./Footer";
 
+import Navbar from "./Navbar";
 
 
 
@@ -56,70 +57,11 @@ function Home(){
 
 return(
     <>
-        <div className="hero-section ">
-           <div className="w-full flex item-center bg-white h-[100px] justify-between">
-            <div className="w-[25%] ">
-                <img src="/logo.webp" className="h-[90px] pl-5 pt-3"/>
-            </div>  
+    <div className="hero-section ">
+           
+      <Navbar/>
 
-            <div className="w-[45%]">
-  
-  <ul className="flex justify-between items-center mt-8 text-lg font-medium">
 
-    <li className="hover:text-orange-400 cursor-pointer ">
-      Home
-    </li>
-
-    <li>
-      <select className="w-[90px] cursor-pointer outline-none bg-transparent hover:text-orange-400">
-
-        <option>Course</option>
-        <option>Digital Marketing Course</option>
-        <option>Web Development</option>
-        <option>Social Media Marketing</option>
-        <option>Graphic Design</option>
-        <option>Data Analytics</option>
-        <option>Data Science</option>
-        <option>Python With DSA</option>
-        <option>Wordpress Development</option>
-        <option>Cyber Security</option>
-        <option>Video Editing</option>
-        <option>Mernstack</option>
-
-      </select>
-    </li>
-
-    <li className="hover:text-orange-400 cursor-pointer">
-      About Us
-    </li>
-
-    <li className="hover:text-orange-400 cursor-pointer">
-      Blogs
-    </li>
-
-    <li className="hover:text-orange-400 cursor-pointer">
-      Services
-    </li>
-
-    <li className="hover:text-orange-400 cursor-pointer">
-      Contact
-    </li>
-
-  </ul>
-
-</div>
-
-            <div className="w-[20%]  flex justify-between ">
-                <FaFacebookF className="mt-10 text-orange-600 text-xl hover:text-black cursor-pointer"/>
-                <FaYoutube  className="mt-10 text-orange-600 text-xl hover:text-black cursor-pointer"/>
-                <div className="flex items-center">
-                    <IoIosContact className="text-orange-600"/>
-                    <button className="flex font-medium text-sm cursor-pointer">Sing in</button>
-                </div>
-                <img src="/bar.png" className="h-[35px] mt-8 mr-4"/>
-            </div>
-
-           </div>  
 
 
 
@@ -228,6 +170,7 @@ return(
       <div className="w-full flex items-center justify-between">
 
         <div className="w-[22%] h-[340px] border border-gray-300 rounded">
+         <a href="/coursedetail">
           <img src="/course8.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
 
           <div className="pl-6">
@@ -246,9 +189,11 @@ return(
             </div> 
 
           </div>
+          </a> 
         </div> 
 
         <div className="w-[22%] h-[340px] border border-gray-300 rounded">
+        <a href="/coursedetail">  
           <img src="/course7.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
 
           <div className="pl-6">
@@ -267,9 +212,11 @@ return(
             </div> 
 
           </div>
+          </a>
         </div>
 
         <div className="w-[22%] h-[340px] border border-gray-300 rounded">
+        <a href="/coursedetail"> 
           <img src="/course6.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
 
           <div className="pl-6">
@@ -288,9 +235,11 @@ return(
             </div> 
 
           </div>
+          </a> 
         </div>
 
         <div className="w-[22%] h-[340px] border border-gray-300 rounded">
+        <a href="/coursedetail">  
           <img src="/course5.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
 
           <div className="pl-6">
@@ -309,6 +258,7 @@ return(
             </div> 
 
           </div>
+          </a>
         </div>
 
       </div>
@@ -317,6 +267,7 @@ return(
       <div className="w-full flex items-center justify-between mt-5">
 
         <div className="w-[22%] h-[340px] border border-gray-300 rounded">
+        <a href="/coursedetail">  
           <img src="/course4.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
 
           <div className="pl-6">
@@ -335,9 +286,11 @@ return(
             </div> 
 
           </div>
+          </a>
         </div> 
 
         <div className="w-[22%] h-[340px] border border-gray-300 rounded">
+        <a href="/coursedetail">  
           <img src="/course3.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
 
           <div className="pl-6">
@@ -356,9 +309,11 @@ return(
             </div> 
 
           </div>
+          </a>
         </div>
 
         <div className="w-[22%] h-[340px] border border-gray-300 rounded">
+         <a href="/coursedetail"> 
           <img src="/course2.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
 
           <div className="pl-6">
@@ -377,9 +332,11 @@ return(
             </div> 
 
           </div>
+          </a>
         </div>
 
         <div className="w-[22%] h-[340px] border border-gray-300 rounded">
+         <a href="/coursedetail"> 
           <img src="/course1.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
 
           <div className="pl-6">
@@ -398,6 +355,7 @@ return(
             </div> 
 
           </div>
+          </a>
         </div>
 
       </div>
@@ -474,10 +432,11 @@ return(
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
     </p>
 
+   <a href="/coursedetail"> 
     <button className="enroll-btn">
       GET ENROLLED →
     </button>
-
+    </a>
       </div>  
 
     </div>
@@ -538,9 +497,11 @@ return(
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
     </p>
 
+    <a href="/coursedetail"> 
     <button className="enroll-btn">
       GET ENROLLED →
     </button>
+    </a>
 
       </div>  
 
@@ -604,9 +565,11 @@ return(
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
     </p>
 
+    <a href="/coursedetail"> 
     <button className="enroll-btn">
       GET ENROLLED →
     </button>
+    </a>
 
       </div>  
 
@@ -616,9 +579,12 @@ return(
 
 
   <div className="flex justify-center items-center mt-10">
+
+  <a href="/Course"> 
     <button className="bg-[#062a35] text-white px-8 py-4 font-semibold cursor-pointer border border-sky-900 hover:bg-orange-600 transition duration-300 ">
       VIEW ALL COURSES →
     </button>
+  </a>   
   </div>
 
   </div>
@@ -657,7 +623,7 @@ return(
      <div className= "w-[95%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8">  
 
       <div className="team-member">
-
+      <a href="/team">
         <div className="team-img group">
           <img src="/team1.avif" alt="" />
 
@@ -682,12 +648,12 @@ return(
               <p className="text-sm text-gray-500">750 + Course</p>
           </span> 
         </div>
-
+      </a>
       </div>
 
 
       <div className="team-member">
-
+      <a href="/team">
         <div className="team-img group">
           <img src="/team4.avif" alt="" />
 
@@ -712,12 +678,12 @@ return(
               <p className="text-sm text-gray-500">750 + Course</p>
           </span> 
         </div>
-
+        </a>
       </div>
 
 
       <div className="team-member">
-
+      <a href="team">
         <div className="team-img group">
           <img src="/team3.avif" alt="" />
 
@@ -742,13 +708,13 @@ return(
               <p className="text-sm text-gray-500">700 + Course</p>
           </span> 
         </div>
-
+      </a>
       </div>
 
 
 
       <div className="team-member">
-
+      <a href="/team">
         <div className="team-img group">
           <img src="/team2.avif" alt="" />
 
@@ -773,7 +739,7 @@ return(
               <p className="text-sm text-gray-500">590 + Course</p>
           </span> 
         </div>
-
+        </a>
       </div>
 
   </div>
@@ -968,7 +934,10 @@ return(
       </div>
 
           <div className="flex itmes-center gap-5 mt-8"> 
+           <a href="/contact"> 
             <button class=" h-[50px] w-[180px] bg-orange-600 p-3 font-semibold text-white mt-8 cursor-pointer hover:bg-[#062a35] duration-400">JOIN WITH US</button>
+            </a>
+
 
             <button class=" h-[50px] w-[180px] bg-white hover:bg-orange-500 p-3 font-semibold text-[#062a35] hover:text-white mt-8 cursor-pointer duration-400 text-sm">BECOME A PARTNER</button>
           </div>  
@@ -984,11 +953,15 @@ return(
     </div>
 
 
-    <div className="w-[100%] h-[750px] flex items-center gap-8 justify-center mt-8">
+
+
+    <div className="w-full h-[750px] flex items-center gap-8 justify-center mt-8">
 
       <div className="w-[28%] "> 
 
+        <a href="/blog">
         <img src="/bimg3.jpg"  class="hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
+        </a>
 
         <div className="border border-gray-300">
 
@@ -1004,17 +977,18 @@ return(
            </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Learning Resources In Challenec Times Online Workshops</h2>
+          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog">Learning Resources In Challenec Times Online Workshops </a> </h2>
 
           <div className="flex items-center gap-3 pl-7 mt-5">
              <img src="/g.png" alt="" /> 
              <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
           </div>
 
+          <a href="/blog">
           <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
             <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
           </button>
-
+          </a>
         </div>
 
       </div>
@@ -1022,7 +996,9 @@ return(
 
        <div className="w-[28%] "> 
 
+        <a href="/blog">
         <img src="/bimg2.jpg"  class="hover:-translate-y-2 transition-all duration-300 object-cover cursor-pointer"/>
+        </a>
 
         <div className="border border-gray-300">
 
@@ -1038,16 +1014,18 @@ return(
            </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Djang Models Admin And Harness Rela Tional Database</h2>
+          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog"> Djang Models Admin And Harness Rela Tional Database </a></h2>
 
           <div className="flex items-center gap-3 pl-7 mt-5">
              <img src="/g.png" alt="" /> 
              <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
           </div>
 
+          <a href="/blog">
           <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
             <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
           </button>
+          </a>
 
         </div>
 
@@ -1057,8 +1035,9 @@ return(
 
        <div className="w-[28%] "> 
 
+        <a href="/blog">
         <img src="/bimg1.jpg"  class="hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
-
+        </a>
         <div className="border border-gray-300">
 
           <div className="flex items-center gap-4 pl-7 pt-4">
@@ -1073,16 +1052,18 @@ return(
            </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Smash Podcast With Laura Kalbag What Is Online Privacy</h2>
+          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog"> Smash Podcast With Laura Kalbag What Is Online Privacy</a></h2>
 
           <div className="flex items-center gap-3 pl-7 mt-5">
              <img src="/g.png" alt="" /> 
              <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
           </div>
 
+          <a href="/blog">
           <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
             <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
           </button>
+          </a>
 
         </div>
 
@@ -1097,9 +1078,9 @@ return(
     </div>
 
 
-    <div>
+    
       <Footer/>
-    </div>
+    
 
     </>
 )
