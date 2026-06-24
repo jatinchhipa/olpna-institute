@@ -37,15 +37,16 @@ function Signup(){
         e.preventDefault();
 
         try{
-            const res = await axios.post("http://localhost/api/sign",Sign);
-            alert(res.data.message || "Signup Successfully");
+            const res = await axios.post("http://localhost:9000/api/sign",Sign);
+            console.log(res)
+            alert(res.data.msg || "Signup Successfully");
 
         }catch(err){
-            console.log(err);
-            alert(err.response?.data?.message || err.message || "Signup Error")
+      
+            alert(err.response?.data?.msg  || "Signup Error")
         }
         
-            console.log(Sign)
+            
     }
 
     
@@ -113,12 +114,12 @@ return(
 
                 <div className="w-full h-[45px] border border-gray-300 flex items-center gap-3 rounded-md shadow-sm mt-5">
                  <TbLockPassword  className="text-orange-600 text-xl ml-3"/>
-                 <input type="password" placeholder="Enter Password" className="text-md font-semibold outline-none"/>   
+                 <input type="password" name="password" value={Sign.password} onChange={handleChange} placeholder="Enter Password" className="text-md font-semibold outline-none"/>   
                 </div>
 
 
                 <div className="w-full h-[45px] items-center  rounded-md  mt-5 bg-orange-600 flex items-center justify-center cursor-pointer hover:bg-[#062a35] duration-400">
-                    <button className="text-white font-semibold  font-['Poppins'] cursor-pointer ">SIGN UP</button>
+                    <button type="submit" className="w-full h-[45px] text-white font-semibold  font-['Poppins'] cursor-pointer ">SIGN UP</button>
                 </div>
 
 

@@ -75,7 +75,7 @@ function Navbar(){
                         <button className="flex font-medium text-sm cursor-pointer">Sing in/</button>
                        </a> 
 
-                        <a href="/signup"> 
+                        <a href="/login"> 
                         <button className="flex font-medium text-sm cursor-pointer">Login</button>
                        </a>
 
