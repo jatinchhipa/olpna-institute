@@ -24,7 +24,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Imgswiper from "./Imgswiper";
 
 import Footer from "./Footer";
-
 import Navbar from "./Navbar";
 
 
