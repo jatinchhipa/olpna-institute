@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 
 import { FaYoutube } from "react-icons/fa";
@@ -15,10 +15,41 @@ import Footer from "./Footer";
 import Imgswiper from "./Imgswiper";
 
 
+import axios from 'axios';
+import { useParams } from "react-router-dom";
+
 
 
 
 function Coursedetail(){
+
+     const { id } = useParams();
+
+
+    const[course , setCourse] = useState({});
+
+    useEffect(()=>{
+        fetchcourse()
+    },[id]);
+
+    const fetchcourse = async()=>{
+
+        try{
+            const res = await axios.get(`http://localhost:9000/course/${id}`)
+
+            setCourse(res.data);
+
+        }catch(err){
+            console.log(err)
+        }
+
+    };
+
+
+
+
+
+
     return(
     <>
        <Navbar/> 
@@ -131,9 +162,11 @@ function Coursedetail(){
     </div> 
 
 
+
+
     <div className="w-[30%]">
 
-       <div className="border border-gray-300 h-[650px] p-8 ">
+       <div className="w-full border border-gray-300 h-[650px] p-8 ">
 
         <div className="flex items-center justify-between mt-5 h-[50px]">
             <span className="flex items-center gap-1">
@@ -143,7 +176,7 @@ function Coursedetail(){
 
             <span className="flex items-center">
                 <FaDollarSign  className="text-orange-500 text-xl"/>
-                <p className="text-orange-500  font-semibold text-md">59</p>
+                <p className="text-orange-500  font-semibold text-md">{course.coursePrice}</p>
             </span>
         </div>   
          
@@ -154,7 +187,7 @@ function Coursedetail(){
                 <p className="text-[#062a35] font-semibold text-md">Instructor</p>
             </span>
 
-                <p className="text-orange-500  font-semibold text-md">Ridhima Shamra</p>
+                <p className="text-orange-500  font-semibold text-md">{course.courseProfessor}</p>
            
         </div>
 
@@ -165,7 +198,7 @@ function Coursedetail(){
                 <p className="text-[#062a35] font-semibold text-md">Duration</p>
             </span>
 
-                <p className="text-orange-500  font-semibold text-md">360 Hours</p>
+                <p className="text-orange-500  font-semibold text-md">{course.courseDuration}</p>
     
         </div>
 
@@ -175,7 +208,7 @@ function Coursedetail(){
                 <p className="text-[#062a35] font-semibold text-md">Lectures</p>
             </span>
 
-                <p className="text-orange-500  font-semibold text-md">20 Lessons</p>
+                <p className="text-orange-500  font-semibold text-md">{course.lectures}</p>
            
         </div>
 
@@ -185,7 +218,7 @@ function Coursedetail(){
                 <p className="text-[#062a35] font-semibold text-md">Enrolled</p>
             </span>
            
-                <p className="text-orange-500  font-semibold text-md">1000 Students</p>
+                <p className="text-orange-500  font-semibold text-md">{course.student} Students</p>
            
         </div>
 
@@ -195,7 +228,7 @@ function Coursedetail(){
                 <p className="text-[#062a35] font-semibold text-md">Language</p>
             </span>
 
-                <p className="text-orange-500  font-semibold text-md">English</p>
+                <p className="text-orange-500  font-semibold text-md">{course.language}</p>
         </div>
 
         <div className="flex items-center justify-between mt-5 h-[50px] border-t border-t-gray-200">
@@ -204,13 +237,15 @@ function Coursedetail(){
                 <p className="text-[#062a35] font-semibold text-md">Deadline</p>
             </span>
          
-                <p className="text-orange-500  font-semibold text-md">27 july 2026</p>         
+                <p className="text-orange-500  font-semibold text-md">{course.courseDeadline}</p>         
         </div> 
 
 
             <button className="w-[210px] h-[55px] bg-sky-600 text-white font-semibold rounded-full ml-10 mt-10 cursor-pointer hover:bg-orange-500 duration-300">ENROLLED NOW</button>
 
        </div>  
+
+       
 
 
         <div className="w-full mt-15">

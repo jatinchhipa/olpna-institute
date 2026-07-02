@@ -26,10 +26,58 @@ import Imgswiper from "./Imgswiper";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
+import axios from 'axios';
+
 
 
 
 function Home(){
+
+    const [course , setCourse] = useState([]);
+
+
+     useEffect(()=>{
+
+        fetchcourse();
+     },[]) 
+
+
+     const fetchcourse = async()=>{
+
+        try{
+
+          const res = await axios.get('http://localhost:9000/getcourse',course);
+
+          setCourse(res.data);
+
+        }catch(err){
+          console.log(err);
+        }
+
+     };
+
+
+
+
+     const[professor , setProfessor]=useState([]);
+
+     useEffect(()=>{
+        fetchprofessor()
+     },[]);
+
+     const fetchprofessor = async()=>{
+
+        try{
+          const res = await axios.get("http://localhost:9000/getprofessor",professor);
+
+          setProfessor(res.data);
+        }catch(err){
+            console.log(err)
+        }
+     }
+
+
+
 
 
 
@@ -164,201 +212,50 @@ return(
             <h1 className="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Course Categories</h1>
     </div>
 
+
+
+
     <div className="w-[90%] ml-15 mt-10">
 
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex flex-wrap items-center justify-between ">
 
-        <div className="w-[22%] h-[340px] border border-gray-300 rounded">
-         <a href="/coursedetail">
-          <img src="/course8.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
+        {course.map((item)=>{
 
-          <div className="pl-6">
-              <p className="text-xl font-bold text-[#062a35] mt-4 hover:text-orange-600 cursor-pointer">Graphics Design (UI)</p>
-              <p className="text-gray-500 text-md mt-2 tracking-wide">Web Design Course</p>
+          return(
 
-            <div className="flex gap-6 mt-2">  
-              <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">250</p>  
-              </span>
-               <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">800 + Courses</p>  
-              </span>
+        <div key={item._id} className="w-[23%] h-[360px] border border-gray-300 rounded mt-5">
+          
+         <a href={`/coursedetail/${item._id}`}>
+          <img src={`http://localhost:9000/uploads/${item.courseImg}`} alt={item.courseImg} className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer w-full h-[200px]"/> 
+
+          <div className="pl-4">
+              <p className="text-[22px] font-bold text-[#062a35] mt-4 hover:text-orange-500 cursor-pointer line-clamp-2 h-[40px]">{item.courseName}</p>
+              <p className="text-gray-500 text-[15px] leading-5 line-clamp-2 h-[30px]">{item.courseDetail}</p>
+
+            <div className="flex justify-between">  
+              <div className="flex items-center gap-2 bg-orange-50 px-3 py-2 rounded-md">
+                <HiOutlineUsers className="text-orange-500 text-lg"/>
+                <span className="text-sm font-medium">{item.student} Students</span>
+              </div>
+
+              <div className="flex items-center gap-2 bg-orange-50 px-3 py-2 rounded-md">
+                <HiOutlineUsers className="text-orange-500 text-lg"/>
+                <span className="text-sm font-medium">{item.courseNumber}</span>
+              </div>
             </div> 
 
           </div>
           </a> 
         </div> 
 
-        <div className="w-[22%] h-[340px] border border-gray-300 rounded">
-        <a href="/coursedetail">  
-          <img src="/course7.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
+          )
 
-          <div className="pl-6">
-              <p className="text-xl font-bold text-[#062a35] mt-4 hover:text-orange-600 cursor-pointer">Business Studies</p>
-              <p className="text-gray-500 text-md mt-2 tracking-wide">Finance Business</p>
+        })
+        }
 
-            <div className="flex gap-6 mt-2">  
-              <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">250</p>  
-              </span>
-               <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">700 + Courses</p>  
-              </span>
-            </div> 
-
-          </div>
-          </a>
-        </div>
-
-        <div className="w-[22%] h-[340px] border border-gray-300 rounded">
-        <a href="/coursedetail"> 
-          <img src="/course6.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
-
-          <div className="pl-6">
-              <p className="text-xl font-bold text-[#062a35] mt-4 hover:text-orange-600 cursor-pointer">Web Development</p>
-              <p className="text-gray-500 text-md mt-2 tracking-wide">Web Design Course</p>
-
-            <div className="flex gap-6 mt-2">  
-              <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">250</p>  
-              </span>
-               <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">800 + Courses</p>  
-              </span>
-            </div> 
-
-          </div>
-          </a> 
-        </div>
-
-        <div className="w-[22%] h-[340px] border border-gray-300 rounded">
-        <a href="/coursedetail">  
-          <img src="/course5.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
-
-          <div className="pl-6">
-              <p className="text-xl font-bold text-[#062a35] mt-4 hover:text-orange-600 cursor-pointer">Product Engineering</p>
-              <p className="text-gray-500 text-md mt-2 tracking-wide">Web Design Course</p>
-
-            <div className="flex gap-6 mt-2">  
-              <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">250</p>  
-              </span>
-               <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">800 + Courses</p>  
-              </span>
-            </div> 
-
-          </div>
-          </a>
-        </div>
+        
 
       </div>
-
-
-      <div className="w-full flex items-center justify-between mt-5">
-
-        <div className="w-[22%] h-[340px] border border-gray-300 rounded">
-        <a href="/coursedetail">  
-          <img src="/course4.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
-
-          <div className="pl-6">
-              <p className="text-xl font-bold text-[#062a35] mt-4 hover:text-orange-600 cursor-pointer">Graphics Design (UI)</p>
-              <p className="text-gray-500 text-md mt-2 tracking-wide">Basic Photography</p>
-
-            <div className="flex gap-6 mt-2">  
-              <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">250</p>  
-              </span>
-               <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">800 + Courses</p>  
-              </span>
-            </div> 
-
-          </div>
-          </a>
-        </div> 
-
-        <div className="w-[22%] h-[340px] border border-gray-300 rounded">
-        <a href="/coursedetail">  
-          <img src="/course3.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
-
-          <div className="pl-6">
-              <p className="text-xl font-bold text-[#062a35] mt-4 hover:text-orange-600 cursor-pointer">Medical & Health</p>
-              <p className="text-gray-500 text-md mt-2 tracking-wide">Doctors & Nursing</p>
-
-            <div className="flex gap-6 mt-2">  
-              <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">250</p>  
-              </span>
-               <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">700 + Courses</p>  
-              </span>
-            </div> 
-
-          </div>
-          </a>
-        </div>
-
-        <div className="w-[22%] h-[340px] border border-gray-300 rounded">
-         <a href="/coursedetail"> 
-          <img src="/course2.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
-
-          <div className="pl-6">
-              <p className="text-xl font-bold text-[#062a35] mt-4 hover:text-orange-600 cursor-pointer">Marketing Strategy</p>
-              <p className="text-gray-500 text-md mt-2 tracking-wide">Social Media Marketing</p>
-
-            <div className="flex gap-6 mt-2">  
-              <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">250</p>  
-              </span>
-               <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">800 + Courses</p>  
-              </span>
-            </div> 
-
-          </div>
-          </a>
-        </div>
-
-        <div className="w-[22%] h-[340px] border border-gray-300 rounded">
-         <a href="/coursedetail"> 
-          <img src="/course1.jpg" className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer"/> 
-
-          <div className="pl-6">
-              <p className="text-xl font-bold text-[#062a35] mt-4 hover:text-orange-600 cursor-pointer">Product Engineering</p>
-              <p className="text-gray-500 text-md mt-2 tracking-wide">Web Design Course</p>
-
-            <div className="flex gap-6 mt-2">  
-              <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">250</p>  
-              </span>
-               <span className="flex gap-2 cursor-pointer">
-                <HiOutlineUsers  className="text-xl text-orange-500"/>    
-                <p className="text-sm text-gray-500">800 + Courses</p>  
-              </span>
-            </div> 
-
-          </div>
-          </a>
-        </div>
-
-      </div>
-
 
     </div>
 
@@ -621,10 +518,15 @@ return(
 
      <div className= "w-[95%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8">  
 
-      <div className="team-member">
-      <a href="/team">
+      {professor.map((item)=>{
+
+        return(
+
+      <div key={item._id} className="team-member">
+        
+      <a href={`/team/${item._id}`}>
         <div className="team-img group">
-          <img src="/team1.avif" alt="" />
+          <img src={`http://localhost:9000/uploads/${item.professorImg}`} alt={item.professorImg} />
 
           <div className="plus-btn">+</div>
       
@@ -639,107 +541,25 @@ return(
         </div>
 
         <div className="bg-white p-5 h-[200px]">
-            <h1 className="text-2xl font-bold text-[#062a35]">Ravi Sharma</h1>
-            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Math Teacher</p>
+            <h1 className="text-2xl font-bold text-[#062a35]">{item.name}</h1>
+            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">{item.department}</p>
 
           <span className="flex items-center gap-2 mt-3">
               <LuBookAudio className="text-orange-500 text-sm"/>
               <p className="text-sm text-gray-500">750 + Course</p>
           </span> 
+          <button className="mt-3 bg-orange-500 hover:bg-[#062a35] text-white px-6 py-2 rounded-full transition cursor-pointer">
+            View Profile
+        </button>
         </div>
       </a>
       </div>
 
-
-      <div className="team-member">
-      <a href="/team">
-        <div className="team-img group">
-          <img src="/team4.avif" alt="" />
-
-          <div className="plus-btn">+</div>
-      
-          <div className="social-icons">
-            <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
-
-            <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
-            <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
-
-          </div>
-
-        </div>
-
-        <div className="bg-white p-5 h-[200px]">
-            <h1 className="text-2xl font-bold text-[#062a35]">Ridhima sharma</h1>
-            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Math Teacher</p>
-
-          <span className="flex items-center gap-2 mt-3">
-              <LuBookAudio className="text-orange-500 text-sm"/>
-              <p className="text-sm text-gray-500">750 + Course</p>
-          </span> 
-        </div>
-        </a>
-      </div>
+        )    
+      })}
 
 
-      <div className="team-member">
-      <a href="team">
-        <div className="team-img group">
-          <img src="/team3.avif" alt="" />
-
-          <div className="plus-btn">+</div>
-      
-          <div className="social-icons">
-            <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
-
-            <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
-            <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
-
-          </div>
-
-        </div>
-
-        <div className="bg-white p-5 h-[200px]">
-            <h1 className="text-2xl font-bold text-[#062a35]">Ajay yadav</h1>
-            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Computer Teacher</p>
-
-          <span className="flex items-center gap-2 mt-3">
-              <LuBookAudio className="text-orange-500 text-sm"/>
-              <p className="text-sm text-gray-500">700 + Course</p>
-          </span> 
-        </div>
-      </a>
-      </div>
-
-
-
-      <div className="team-member">
-      <a href="/team">
-        <div className="team-img group">
-          <img src="/team2.avif" alt="" />
-
-          <div className="plus-btn">+</div>
-      
-          <div className="social-icons">
-            <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
-
-            <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
-            <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
-
-          </div>
-
-        </div>
-
-        <div className="bg-white p-5 h-[200px]">
-            <h1 className="text-2xl font-bold text-[#062a35]">Aaditay sharma</h1>
-            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">English Teacher</p>
-
-          <span className="flex items-center gap-2 mt-3">
-              <LuBookAudio className="text-orange-500 text-sm"/>
-              <p className="text-sm text-gray-500">590 + Course</p>
-          </span> 
-        </div>
-        </a>
-      </div>
+    
 
   </div>
 

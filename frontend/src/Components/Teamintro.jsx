@@ -11,13 +11,40 @@ import { AiFillInstagram } from "react-icons/ai";
 import { PiStudentThin } from "react-icons/pi";
 import { HiOutlineUsers } from "react-icons/hi2";
 
-
+import axios from 'axios';
+import { useParams } from "react-router-dom";
 
 
 
 
 
 function Teamintro(){
+
+
+  const{id} = useParams();
+
+  const[professor , setProfessor]=useState([]);
+
+    useEffect(()=>{
+      fetchprofessor()
+    },[id]);
+
+
+    const fetchprofessor = async()=>{
+
+      try{
+        const res = await axios.get(`http://localhost:9000/professor/${id}`)
+
+        setProfessor(res.data);
+      }catch(err){
+        console.log(err)
+      }
+
+    }
+
+
+
+
 
 
     const [students, setStudents] = useState(0);
@@ -57,13 +84,13 @@ return(
 
         <div className="w-[35%] ">
 
-            <img src="/team3.avif" alt=""  className=" w-full min-h-[400px] object-cover"/>
+            <img src={`http://localhost:9000/uploads/${professor.professorImg}`} alt={professor.professorImg}  className=" w-full min-h-[400px] object-cover"/>
 
             <div className="w-full bg-white flex p-6 h-auto">
 
               <div className="w-[50%]">  
-              <h1 className="text-[#062a35] text-[19px] font-[700]">Aaditay Sharma</h1>  
-              <p className="text-gray-500 text-sm ">Math Teacher</p>
+              <h1 className="text-[#062a35] text-[19px] font-[700]">{professor.name}</h1>  
+              <p className="text-gray-500 text-sm ">{professor.department}</p>
 
               <span className="flex items-center gap-2 mt-3 border-t border-t-gray-300 pt-5">
                     <LuBookAudio className="text-orange-500 text-md"/>
@@ -91,12 +118,7 @@ return(
         <div className="w-[60%] bg-white  p-10">
            <h1 className="text-[#062a35] text-3xl font-[700]">About Me</h1> 
 
-           <p className="text-gray-500 leading-7 text-[15px] pt-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantioloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-
-            <p className="text-gray-500 leading-7 text-[15px] pt-5"> 
-           Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit
-           </p>
-
+           <p className="text-gray-500 leading-7 text-[15px] pt-5">{professor.about}</p>
 
           <div className="flex gap-8 mt-8 justify-center">  
            <div className="flex flex-col">
@@ -124,11 +146,11 @@ return(
 
           <div className="w-[48%] bg-white p-12">
             <h1 className="text-[#062a35] text-2xl font-[700]">Certifications</h1>  
-            <p className="text-gray-500 text-[15px] leading-7 pt-5">Sed ut perspiciatis unde omnis iste natus error sit accus tioloreme laudantium totam rem aperiam eaque ipsa quae ab illo inventoresy veritatis quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur</p>
+            <p className="text-gray-500 text-[15px] leading-7 pt-5">{professor.certificate}</p>
 
             <div className="flex items-center gap-5 mt-8">
-                <img src="/c1.jpg" alt="" />
-                <img src="/c2.jpg" alt="" />
+                <img src={`http://localhost:9000/uploads/${professor.certificateImg}`} alt={professor.certificateImg} />
+                
                 <img src="/c3.jpg" alt="" />
             </div>    
 
@@ -144,8 +166,8 @@ return(
                    <PiStudentThin  className="text-5xl text-orange-500"/>
 
                     <span>
-                        <h1 className="text-[#062a35] text-md font-bold">World University</h1>
-                        <p className="text-gray-500 pt-1">Computer Science</p>
+                        <h1 className="text-[#062a35] text-md font-bold">{professor.univercity}</h1>
+                        <p className="text-gray-500 pt-1">{professor.education}</p>
                     </span>    
                </div>
 
@@ -153,8 +175,8 @@ return(
                    <PiStudentThin  className="text-5xl text-orange-500"/>
 
                     <span>
-                        <h1 className="text-[#062a35] text-md font-bold">World University</h1>
-                        <p className="text-gray-500 pt-1">Computer Science</p>
+                        <h1 className="text-[#062a35] text-md font-bold">{professor.univercity}</h1>
+                        <p className="text-gray-500 pt-1">{professor.education}</p>
                     </span>    
                </div>
 
@@ -168,8 +190,8 @@ return(
                    <PiStudentThin  className="text-5xl text-orange-500"/>
 
                     <span>
-                        <h1 className="text-[#062a35] text-md font-bold">Graphics Designer</h1>
-                        <p className="text-gray-500 pt-1">Behance.net</p>
+                        <h1 className="text-[#062a35] text-md font-bold">{professor.experience}</h1>
+                        <p className="text-gray-500 pt-1">{professor.experienceUrl}</p>
                     </span>    
                </div>
 
@@ -177,8 +199,8 @@ return(
                    <PiStudentThin  className="text-5xl text-orange-500"/>
 
                     <span>
-                        <h1 className="text-[#062a35] text-md font-bold">Web Developer</h1>
-                        <p className="text-gray-500 pt-1">Themeforest.net </p>
+                        <h1 className="text-[#062a35] text-md font-bold">{professor.experience}</h1>
+                        <p className="text-gray-500 pt-1">{professor.experienceUrl}</p>
                     </span>    
                </div>
 

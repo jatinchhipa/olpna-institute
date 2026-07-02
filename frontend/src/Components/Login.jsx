@@ -6,10 +6,23 @@ import { TbLockPassword } from "react-icons/tb";
 import Footer from "./Footer";
 import axios from "axios";
 
+import { useContext } from "react";
+import { AuthContext } from "../../auth/AuthContext";
+
+import { useNavigate, useLocation } from "react-router-dom";
+
+
 
 
 
 function Login(){
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+
+    const {login} = useContext(AuthContext)
+    
 
 
         const[Login , setLogin]=useState({
@@ -29,9 +42,21 @@ function Login(){
             try{
 
                const res = await axios.post("http://localhost:9000/api/login",Login);
+
+                login(res.data.token , res.data.user)
+
+                console.log(res.data)
+
                alert(res.data.msg || "Login succesfully")
 
+               const from = location.state?.from || "/";
+
+                navigate(from, { replace: true });
+
+              
+
             }catch(err){
+                console.log(err)
                 alert(err.response?.data?.msg || "login error")
             }
         }
