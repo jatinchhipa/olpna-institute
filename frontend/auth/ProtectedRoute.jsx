@@ -17,7 +17,7 @@ import { Navigate,useLocation } from "react-router-dom";
     }
 
     if (!user) {
-        return <Navigate to="/login"  
+        return <Navigate to="/signup"  
                 state={{ from: location.pathname }}
                 replace />;
     }

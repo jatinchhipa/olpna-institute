@@ -19,11 +19,11 @@ function AuthProvider({children}){
 
         const savedUser = localStorage.getItem("user");
 
-console.log("savedUser =", savedUser);
+        console.log("savedUser =", savedUser);
 
-if (savedUser && savedUser !== "undefined") {
-    setUser(JSON.parse(savedUser));
-}
+        if (savedUser && savedUser !== "undefined") {
+        setUser(JSON.parse(savedUser));
+        }
 
         setLoading(false)
 
