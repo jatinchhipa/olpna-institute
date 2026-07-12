@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useContext} from "react";
 import Navbar from "./Navbar";
 
 import { FaYoutube } from "react-icons/fa";
@@ -17,7 +17,10 @@ import Imgswiper from "./Imgswiper";
 
 import axios from 'axios';
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+
+import { AuthContext } from "../../auth/AuthContext";
 
 
 
@@ -45,6 +48,55 @@ function Coursedetail(){
 
     };
 
+
+    const[professor , setProfessor] = useState([]);
+
+       useEffect(()=>{
+            fetchprofessor()
+       },[]);
+
+       const fetchprofessor = async()=>{
+
+        try{
+            const res = await axios.get("http://localhost:9000/getprofessor" , professor);
+
+            setProfessor(res.data);
+
+        }catch(err){
+            console.log(err)
+        }
+       }
+
+
+
+
+       const { user } = useContext(AuthContext);
+       
+       
+            const addToCart = async (courseId) => {
+       
+           try {
+       
+               const res = await axios.post(
+                   "http://localhost:9000/cart",
+                   {
+                       userId: user._id,
+                       courseId: courseId
+                   }
+               );
+       
+               alert(res.data.msg);
+       
+           } catch (err) {
+       
+               alert(err.response.data.msg);
+       
+           }
+       
+       }
+    
+
+    
 
 
 
@@ -121,41 +173,24 @@ function Coursedetail(){
 
 
         <div className="w-full flex flex-wrap mt-10 gap-5">
-            {/* <h1 className="text-3xl font-bold text-[#062a35] ">Course Instructors</h1> */}
-             
-           <div className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
-                <img src="/team1.avif" alt="" className="w-[190px] h-[190px] rounded-full object-cover"/>
 
-                <h1 className="text-xl font-bold text-[#062a35] pt-5">Ravi Sharma</h1>
+            {professor.map((item)=>{
+            return(
+               
+                
+           <div key={item._id} className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
+              <Link to={`/team/${item._id}`}> 
+                <img src={`http://localhost:9000/uploads/${item.professorImg}`} alt={item.professorImg} className="w-[190px] h-[190px] rounded-full object-cover"/>
+
+                <h1 className="text-xl font-bold text-[#062a35] pt-5 ">{item.name}</h1>
                 <p className="text-gray-400 text-sm">Math Teacher</p>
+               </Link>  
            </div>  
+               
 
+            )       
 
-
-            <div className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
-                <img src="/team3.avif" alt="" className="w-[190px] h-[190px] rounded-full object-cover"/>
-
-                <h1 className="text-xl font-bold text-[#062a35] pt-5">Ajay Yadav</h1>
-                <p className="text-gray-400 text-sm">Math Teacher</p>
-           </div> 
-
-
-
-            <div className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer ">
-                <img src="/team4.avif" alt="" className="w-[190px] h-[190px] rounded-full object-cover"/>
-
-                <h1 className="text-xl font-bold text-[#062a35] pt-5">Ridhima Sharma</h1>
-                <p className="text-gray-400 text-sm">Math Teacher</p>
-           </div> 
-
-
-
-            <div className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
-                <img src="/team2.avif" alt="" className="w-[190px] h-[190px] rounded-full object-cover"/>
-
-                <h1 className="text-xl font-bold text-[#062a35] pt-5">Aaditay Sharma</h1>
-                <p className="text-gray-400 text-sm">Math Teacher</p>
-           </div> 
+            })}
 
         </div>
 
@@ -166,7 +201,7 @@ function Coursedetail(){
 
     <div className="w-[30%]">
 
-       <div className="w-full border border-gray-300 h-[650px] p-8 ">
+       <div className="w-full border border-gray-300 min-h-[650px] p-8 ">
 
         <div className="flex items-center justify-between mt-5 h-[50px]">
             <span className="flex items-center gap-1">
@@ -175,7 +210,7 @@ function Coursedetail(){
             </span>
 
             <span className="flex items-center">
-                <FaDollarSign  className="text-orange-500 text-xl"/>
+               
                 <p className="text-orange-500  font-semibold text-md">{course.coursePrice}</p>
             </span>
         </div>   
@@ -241,7 +276,12 @@ function Coursedetail(){
         </div> 
 
 
-            <button className="w-[210px] h-[55px] bg-sky-600 text-white font-semibold rounded-full ml-10 mt-10 cursor-pointer hover:bg-orange-500 duration-300">ENROLLED NOW</button>
+          <Link to={`/buynow/${course._id}`}>
+            <button className="w-[210px] h-[55px] bg-sky-600 text-white font-semibold rounded-full ml-10 mt-10 cursor-pointer hover:bg-orange-500 duration-300">Buy Now</button>
+          </Link>  
+
+            <button onClick={() => addToCart(course._id)} className="w-[210px] h-[55px] bg-red-600 text-white font-semibold rounded-full ml-10 mt-5 cursor-pointer hover:bg-orange-500 duration-300">Add To Cart</button>
+  
 
        </div>  
 

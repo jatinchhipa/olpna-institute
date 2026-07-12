@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Imgswiper from "./Imgswiper";
 import Footer from "./Footer";
@@ -12,11 +12,33 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-
+import axios from 'axios';
 
 
 
 function Course(){
+
+    const[professor , setProfessor]=useState([]);
+      
+      useEffect(()=>{
+        fetchprofessor()
+      },[]);
+      
+    const fetchprofessor = async()=>{
+      
+      try{
+          const res = await axios.get("http://localhost:9000/getprofessor",professor);
+      
+            setProfessor(res.data);
+          }catch(err){
+              console.log(err)
+          }
+    }
+
+
+
+
+
     return(
     <>
         <Navbar/>
@@ -450,128 +472,49 @@ function Course(){
           
     
          <div className= "w-[95%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8">  
-    
-          <div className="team-member">
-    
-            <div className="team-img group">
-              <img src="/team1.avif" alt=""  />
-    
-              <div className="plus-btn">+</div>
-          
-              <div className="social-icons">
-                <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
-    
-                <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
-                <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
-    
-              </div>
-    
-            </div>
-    
-            <div className="bg-white p-5 h-[200px]">
-                <h1 className="text-2xl font-bold text-[#062a35]">Ravi Sharma</h1>
-                <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Math Teacher</p>
-    
-              <span className="flex items-center gap-2 mt-3">
-                  <LuBookAudio className="text-orange-500 text-sm"/>
-                  <p className="text-sm text-gray-500">750 + Course</p>
-              </span> 
-            </div>
-    
+
+      {professor.map((item)=>{
+
+        return(
+
+      <div key={item._id} className="team-member">
+        
+      <a href={`/team/${item._id}`}>
+        <div className="team-img group">
+          <img src={`http://localhost:9000/uploads/${item.professorImg}`} alt={item.professorImg} />
+
+          <div className="plus-btn">+</div>
+      
+          <div className="social-icons">
+            <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
+
+            <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
+            <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
+
           </div>
-    
-    
-          <div className="team-member">
-    
-            <div className="team-img group">
-              <img src="/team4.avif" alt="" />
-    
-              <div className="plus-btn">+</div>
-          
-              <div className="social-icons">
-                <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
-    
-                <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
-                <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
-    
-              </div>
-    
-            </div>
-    
-            <div className="bg-white p-5 h-[200px]">
-                <h1 className="text-2xl font-bold text-[#062a35]">Ridhima sharma</h1>
-                <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Math Teacher</p>
-    
-              <span className="flex items-center gap-2 mt-3">
-                  <LuBookAudio className="text-orange-500 text-sm"/>
-                  <p className="text-sm text-gray-500">750 + Course</p>
-              </span> 
-            </div>
-    
-          </div>
-    
-    
-          <div className="team-member">
-    
-            <div className="team-img group">
-              <img src="/team3.avif" alt="" />
-    
-              <div className="plus-btn">+</div>
-          
-              <div className="social-icons">
-                <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
-    
-                <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
-                <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
-    
-              </div>
-    
-            </div>
-    
-            <div className="bg-white p-5 h-[200px]">
-                <h1 className="text-2xl font-bold text-[#062a35]">Ajay yadav</h1>
-                <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">Computer Teacher</p>
-    
-              <span className="flex items-center gap-2 mt-3">
-                  <LuBookAudio className="text-orange-500 text-sm"/>
-                  <p className="text-sm text-gray-500">700 + Course</p>
-              </span> 
-            </div>
-    
-          </div>
-    
-    
-    
-          <div className="team-member">
-    
-            <div className="team-img group">
-              <img src="/team2.avif" alt="" />
-    
-              <div className="plus-btn">+</div>
-          
-              <div className="social-icons">
-                <div className="bg-blue-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaFacebookF /></div>
-    
-                <div className="bg-yellow-500 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaTwitter /></div>
-                <div className="bg-red-600 rounded text-white h-[30px] w-[35px] p-2 text-xl"><FaYoutube /></div>
-    
-              </div>
-    
-            </div>
-    
-            <div className="bg-white p-5 h-[200px]">
-                <h1 className="text-2xl font-bold text-[#062a35]">Aaditay sharma</h1>
-                <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">English Teacher</p>
-    
-              <span className="flex items-center gap-2 mt-3">
-                  <LuBookAudio className="text-orange-500 text-sm"/>
-                  <p className="text-sm text-gray-500">590 + Course</p>
-              </span> 
-            </div>
-    
-          </div>
-    
+
+        </div>
+
+        <div className="bg-white p-5 h-[200px]">
+            <h1 className="text-2xl font-bold text-[#062a35]">{item.name}</h1>
+            <p className="text-sm text-gray-400 border-b border-gray-300 pb-5 pt-2">{item.department}</p>
+
+          <span className="flex items-center gap-2 mt-3">
+              <LuBookAudio className="text-orange-500 text-sm"/>
+              <p className="text-sm text-gray-500">750 + Course</p>
+          </span> 
+          <button className="mt-3 bg-orange-500 hover:bg-[#062a35] text-white px-6 py-2 rounded-full transition cursor-pointer">
+            View Profile
+        </button>
+        </div>
+      </a>
       </div>
+
+        )    
+      })}
+
+
+    </div>
     
     </div>
             

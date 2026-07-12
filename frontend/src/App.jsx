@@ -11,6 +11,9 @@ import Signup from './Components/Signup';
 import Login from './Components/Login';
 
 import ProtectedRoute from '../auth/ProtectedRoute';
+import Cartpage from './Components/Cartpage';
+import Buynow from './Components/Buynow';
+
 
 
 function App() {
@@ -32,6 +35,8 @@ function App() {
       <Route path='/contact' element={<Contact/>}/> 
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/cartpage' element={<Cartpage/>}/>
+      <Route path='/buynow/:id' element={<Buynow/>}/>
 
 
       {/* protectroute */}

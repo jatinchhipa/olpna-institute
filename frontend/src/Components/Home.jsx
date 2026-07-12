@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { IoIosContact } from "react-icons/io";
@@ -27,6 +27,8 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 import axios from 'axios';
+
+
 
 
 
@@ -75,6 +77,9 @@ function Home(){
             console.log(err)
         }
      }
+
+
+
 
 
 
@@ -559,11 +564,9 @@ return(
       })}
 
 
-    
+    </div>
 
-  </div>
-
-  </div>
+    </div>
 
 
 
