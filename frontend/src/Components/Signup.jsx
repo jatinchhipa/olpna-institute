@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 import axios from 'axios';
-
+import { useNavigate } from "react-router-dom";
 
 
 import { BsPerson } from "react-icons/bs";
@@ -16,6 +16,8 @@ import { PiStudentBold } from "react-icons/pi";
 
 
 function Signup(){
+
+    const navigate = useNavigate();
 
     const[Sign,setSign]=useState({
 
@@ -40,6 +42,9 @@ function Signup(){
             const res = await axios.post("http://localhost:9000/api/sign",Sign);
             console.log(res)
             alert(res.data.msg || "Signup Successfully");
+
+            navigate("/");
+
 
         }catch(err){
       

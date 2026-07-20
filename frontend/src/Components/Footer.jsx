@@ -10,7 +10,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 function Footer(){
     return(
     <>
-        <div className="footer">
+        <div data-aos="fade-up" className="footer">
 
             <div className="w-[90%] flex h-[180px] items-center ml-20 border-b border-b-gray-700">
                 <div className="w-[38%] relative cursor-pointer group h-[180px]">

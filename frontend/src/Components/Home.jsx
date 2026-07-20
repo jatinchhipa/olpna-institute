@@ -113,62 +113,58 @@ return(
            
       <Navbar/>
 
+      <div className="max-w-7xl mx-auto px-4 md:px-8 pt-10 md:pt-16 flex flex-col-reverse lg:flex-row items-center gap-10">
+          <div className="w-full lg:w-1/2 text-center lg:text-left">  
+              <p data-aos="fade-down" className="text-sm md:text-base text-orange-400 font-semibold">Welcome To EduPlus</p>
 
+              <h1 data-aos="fade-left" className="text-4xl sm:text-5xl lg:text-6xl font-bold text-sky-900 italic font-serif leading-tight ">More than 1200 Online Courses</h1>
 
-
-
-      <div className="w-[90%] flex items-center mt-15 ml-15 mr-15">
-          <div className="w-[50%]">  
-              <p className="text-md text-orange-400 font-semibold pl-5 pt-5">Welcome To EduPlus</p>
-
-              <h1 className="text-[65px] font-bold text-sky-900 italic font-serif ">More than 1200 Online Courses</h1>
-
-              <div className="flex items-center h-[100px] w-[90%] bg-white p-3 justify-between">
-                  <input type="text" placeholder=" Search Course" className="text-lg font-semibold outline-none"/>
+              <div className="mt-8 w-full bg-white rounded-lg shadow-md flex items-center justify-between p-3">
+                  <input type="text" placeholder=" Search Course" className="w-full text-base md:text-lg outline-none"/>
                     <IoSearchSharp className="text-3xl bg-orange-400 w-[50px] h-[50px] text-white p-3 rounded"/>
               </div>
 
-            <div className="flex items-center justify-between mt-8">
+            <div className="flex flex-col md:flex-row gap-4  mt-8">
               <span className=" border-r-4 border-orange-500 pr-8">
                <p className="text-md text-gray-500">Sed ut perspiciatis unde omnis<br/> natus error sit voluptatem</p> 
               </span>  
 
-            <span className="flex items-center gap-5">
+            <span className="flex items-center gap-5 lg:ml-0 ml-8">
               <MdOutlineSupportAgent className="text-4xl text-orange-500" />
 
-             <div className="flex flex-col">
+             <div className="flex flex-col ">
               <p className="text-lg text-gray-800 font-semibold">Online Support</p>
               <p className="text-xl text-sky-900 font-bold">+012 (345) 6789</p>
              </div>
             </span>
               
-              <span>
-
-              </span>
+              
             </div>
 
           </div>
 
-          <div className="w-[50%]">
-              <img src="/herogirl.png" alt="" />
+          <div className="w-full lg:w-1/2 flex justify-center">
+              <img src="/herogirl.png" alt="" className="w-full max-w-md lg:max-w-xl lg:pl-0 pl-12" />
           </div>
       </div>
 
-        <div className="w-[95%] flex items-center h-[100px] ml-15 gap-8">
+        <div className=" max-w-7xl  mx-auto px-6 py-12 ">
 
-          <div className="w-[22%] bg-white h-[100px] flex gap-5 pt-4 pl-3 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+
+          <div className=" bg-white shadow-lg rounded-lg flex items-center gap-4 p-5 md:p-3">
             <span>
-              <IoIosContacts className="text-6xl text-orange-600 "/>
+              <IoIosContacts className="text-5xl md:text-6xl text-orange-600 "/>
             </span>
 
-           <div className="flex flex-col ">
-              <h1 className="text-3xl text-orange-500 font-semibold">{students}+</h1>
+           <div className="flex flex-col md:flex-row">
+              <h1 className="text-3xl  text-orange-500 font-semibold">{students}+</h1>
               <p className="text-md text-gray-500">Saticfied Students</p>
             </div>
 
           </div>
 
-          <div className="w-[22%] bg-white h-[100px] flex gap-5 pt-4 pl-3 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
+          <div className=" bg-white shadow-lg rounded-lg flex items-center gap-4 p-5 md:p-3">
             <span>
               <LiaSwatchbookSolid  className="text-6xl text-orange-600 "/>
             </span>
@@ -180,7 +176,7 @@ return(
 
           </div>
 
-          <div className="w-[22%] bg-white h-[100px] flex gap-5 pt-4 pl-3 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
+          <div className=" bg-white shadow-lg rounded-lg flex items-center gap-4 p-5 md:p-3">
             <span>
               <RiGraduationCapLine className="text-6xl text-orange-600 "/>
             </span>
@@ -192,7 +188,7 @@ return(
 
           </div>
 
-          <div className="w-[22%] bg-white h-[100px] flex gap-5 pt-4 pl-3 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
+          <div className=" bg-white shadow-lg rounded-lg flex items-center gap-4 p-5 md:p-3">
             <span>
               <FaLaptop className="text-6xl text-orange-600" />
 
@@ -205,6 +201,8 @@ return(
 
           </div>
 
+          </div> 
+
         </div>
 
 
@@ -212,38 +210,38 @@ return(
 
 
 
-    <div className="text-center h-[100px] w-full"> 
-            <p className="text-lg font-semibold text-orange-500 "> Popular Categories </p>
-            <h1 className="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Course Categories</h1>
+    <div className="text-center h-[50px] lg:h-[100px] w-full mt-5 lg:mt-5"> 
+            <p className="text-md lg:text-lg font-semibold text-orange-500 "> Popular Categories </p>
+            <h1 className=" lg:pt-0 text-2xl lg:text-5xl font-bold text-[#062a35] tracking-wide ">Course Categories</h1>
     </div>
 
 
 
 
-    <div className="w-[90%] ml-15 mt-10">
+    <div className="w-[90%] mx-auto mt-6 px-2 md:px-0">
 
-      <div className="w-full flex flex-wrap items-center justify-between ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  md:justify-between gap-y-5">
 
         {course.map((item)=>{
 
           return(
 
-        <div key={item._id} className="w-[23%] h-[360px] border border-gray-300 rounded mt-5">
+        <div key={item._id}  className="w-[95%] lg:w-[95%] lg:gap-5 h-[350px] lg:h-[365px] border border-gray-300 rounded mt-5 lg:mt-2 ml-2 lg:ml-0">
           
          <a href={`/coursedetail/${item._id}`}>
           <img src={`http://localhost:9000/uploads/${item.courseImg}`} alt={item.courseImg} className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer w-full h-[200px]"/> 
 
-          <div className="pl-4">
-              <p className="text-[22px] font-bold text-[#062a35] mt-4 hover:text-orange-500 cursor-pointer line-clamp-2 h-[40px]">{item.courseName}</p>
+          <div className="p-3">
+              <p className="text-lg font-bold text-[#062a35] mt-4 hover:text-orange-500 cursor-pointer line-clamp-2 h-[40px]">{item.courseName}</p>
               <p className="text-gray-500 text-[15px] leading-5 line-clamp-2 h-[30px]">{item.courseDetail}</p>
 
             <div className="flex justify-between">  
-              <div className="flex items-center gap-2 bg-orange-50 px-3 py-2 rounded-md">
+              <div className="flex items-center gap-2 bg-orange-100/50 px-3 py-2 ">
                 <HiOutlineUsers className="text-orange-500 text-lg"/>
                 <span className="text-sm font-medium">{item.student} Students</span>
               </div>
 
-              <div className="flex items-center gap-2 bg-orange-50 px-3 py-2 rounded-md">
+              <div className="flex items-center gap-2 bg-orange-100/50 px-3 py-2 ">
                 <HiOutlineUsers className="text-orange-500 text-lg"/>
                 <span className="text-sm font-medium">{item.courseNumber}</span>
               </div>
@@ -268,16 +266,16 @@ return(
 
 
 
-    <div className="w-full bg-[#062a35] h-[850px] mt-20">
+    <div className="w-full bg-[#062a35] h-90% lg:h-[800px] mt-15">
 
-      <div className="text-center h-[200px] w-full pt-15"> 
-            <p className="text-lg font-semibold text-orange-600 "> Popular Courses </p>
-            <h1 className="mt-2 text-5xl font-bold text-orange-500 tracking-wide ">Available Courses</h1>
+      <div className="text-center h-[100px] lg:h-[200px] w-full pt-4 lg:pt-6"> 
+            <p className="text-md lg:text-lg font-semibold text-orange-600 "> Popular Courses </p>
+            <h1 className="lg:mt-2 mt-1  text-2xl lg:text-5xl font-bold text-white tracking-wide ">Available Courses</h1>
       </div> 
 
 
 
-    <div className= "w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8">
+    <div className= "w-[90%] mx-auto  flex flex-wrap justify-center gap-8">
 
         <div className="course-card">
 
@@ -418,7 +416,7 @@ return(
             <img src="/coursec3.jpg"/>
           </div>
 
-          <div className=" p-5 h-[200px]">
+          <div className=" p-5 min-h-[200px]">
 
             <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
 
@@ -479,10 +477,10 @@ return(
   </div>
 
 
-  <div className="flex justify-center items-center mt-10">
+  <div className="flex justify-center items-center mt-8 lg:mt-10">
 
   <a href="/Course"> 
-    <button className="bg-[#062a35] text-white px-8 py-4 font-semibold cursor-pointer border border-sky-900 hover:bg-orange-600 transition duration-300 ">
+    <button className="bg-[#062a35] mb-5 lg:mb-0 text-sm text-white px-4 lg:px-8 py-2 lg:py-4 font-semibold cursor-pointer border border-sky-900 hover:bg-orange-600 transition duration-300 ">
       VIEW ALL COURSES →
     </button>
   </a>   
@@ -493,17 +491,15 @@ return(
 
 
 
-    <div className="w-full text-center mt-18 h-[150px]">
-        <p className="text-lg font-semibold text-orange-600 "> Photo & Album </p>
-        <h1 className="mt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Campus Gallery</h1>
-     </div>
+    <div className="w-full text-center mt-10 min-h-[100px] lg:min-h-[150px]">
+        <p className="text-md lg:text-lg font-semibold text-orange-600 "> Photo & Album </p>
+        <h1 className="lg:mt-2 mt-1 text-2xl lg:text-5xl font-bold text-[#062a35] tracking-wide ">Campus Gallery</h1>
+    </div>
 
 
 
 
-
-
-    <div className="mb-20">
+    <div className="mb-15">
             <Compustab/>
     </div>
 
@@ -512,17 +508,20 @@ return(
 
 
 
-    <div className="bg-sky-100 w-full h-[700px] pt-[80px]">
+    <div className="bg-sky-100 w-full h-auto pt-5 lg:pt-8">
 
-      <div className="text-center h-[100px] w-full"> 
-            <p className="text-lg font-semibold text-orange-500 "> Team Members </p>
-            <h1 className="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Expert Instructors</h1>
+      <div className="text-center h-[50px] lg:h-[100px] w-full"> 
+            <p className="text-md lg:text-lg font-semibold text-orange-500 "> Team Members </p>
+            <h1 className="pt-0 lg:pt-2 text-2xl lg:text-5xl font-bold text-[#062a35] tracking-wide ">Expert Instructors</h1>
       </div>
 
-      
+     
 
-     <div className= "w-[95%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8">  
+     <div className= "w-[95%] mx-auto mt-6 px-2 md:px-0 gap-8">  
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  md:justify-between gap-y-5 ">
+
+        
       {professor.map((item)=>{
 
         return(
@@ -563,6 +562,7 @@ return(
         )    
       })}
 
+      </div>
 
     </div>
 

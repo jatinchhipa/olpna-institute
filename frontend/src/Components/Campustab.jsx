@@ -26,10 +26,13 @@ export default function Compustab() {
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
 
       <TabList
-           centered 
-            onChange={handleChange}
-            aria-label="lab API tabs example"
-         sx={{
+          centered={window.innerWidth >= 768}
+          variant="scrollable"
+          scrollButtons="auto"
+          allowScrollButtonsMobile
+          onChange={handleChange}
+          aria-label="lab API tabs example"
+          sx={{
             "& .MuiTab-root": {
                               color: "#062a35",
                               fontSize: "18px",
@@ -68,7 +71,7 @@ export default function Compustab() {
 
   <TabPanel value="1">
 
-      <div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+      <div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/coursec3.jpg" alt="" />
@@ -121,7 +124,7 @@ export default function Compustab() {
 
 
 
-    <div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+    <div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/gallery1.jpg" alt="" />
@@ -191,7 +194,7 @@ export default function Compustab() {
 
 
     <TabPanel value="2">
-        <div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+        <div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/coursec3.jpg" alt="" />
@@ -231,7 +234,7 @@ export default function Compustab() {
 
 
     <TabPanel value="3">
-           <div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+           <div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/gallery1.jpg" alt="" />
@@ -269,7 +272,7 @@ export default function Compustab() {
 
 
     <TabPanel value="4">
-           <div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+           <div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/gallery1.jpg" alt="" />
@@ -308,7 +311,7 @@ export default function Compustab() {
 
   <TabPanel value="5">
 
-     <div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+     <div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/coursec3.jpg" alt="" />
@@ -361,7 +364,7 @@ export default function Compustab() {
 
 
 
-    <div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+    <div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/gallery1.jpg" alt="" />
@@ -384,7 +387,7 @@ export default function Compustab() {
 
 
   <TabPanel value="6">
-      <div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+      <div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/coursec3.jpg" alt="" />
@@ -422,7 +425,7 @@ export default function Compustab() {
 
 
 
-  <TabPanel value="7"><div className=' w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8'>
+  <TabPanel value="7"><div className='w-[90%] mx-auto mt-8 flex flex-wrap justify-center gap-8'>
 
         <div className='campus-gallery'>
           <img src="/coursec2.jpg" alt="" />

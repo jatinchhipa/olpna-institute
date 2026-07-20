@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 .hero-section{
   background-image: url("/heroback.jpg");
-  height: 800px;
-  width: 100%;
-  background-size: cover;
-  margin-bottom: 170px;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  min-height:90vh;
+  padding-bottom:80px;
 }
 
 
@@ -22,6 +27,21 @@
 }
 
 
+/* Tablet */
+@media (max-width:1024px){
+    .course-card{
+        width:45%;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+    .course-card{
+        width:100%;
+    }
+}
+
+
 
 .course-img img{
      width:100%;
@@ -30,7 +50,32 @@
     display:block;
 }
 
+@media (max-width:768px){
+    .course-img img{
+        height:200px;
+    }
+}
 
+
+
+@media (max-width:768px){
+
+    .hover-content{
+        padding:20px 15px;
+        gap:15px;
+    }
+
+    .hover-content h2{
+        font-size:18px;
+        line-height:25px;
+    }
+
+    .hover-content p{
+        line-height:24px;
+        font-size:14px;
+    }
+
+}
 
 
 
@@ -83,6 +128,16 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
+}
+
+@media (max-width:768px){
+
+.teacher-box{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
 }
 
 .teacher{
@@ -202,18 +257,58 @@
 }
 
 
+/* =================== Tablet =================== */
 
+@media (max-width:1024px){
+
+    .campus-gallery{
+        width:47%;
+    }
+
+    .campus-gallery img{
+        height:280px;
+    }
+
+}
+
+/* =================== Mobile =================== */
+
+@media (max-width:768px){
+
+    .campus-gallery{
+        width:100%;
+    }
+
+    .campus-gallery img{
+        height:220px;
+    }
+
+    .compus-hovercontent{
+        padding:20px 15px;
+    }
+
+    .compus-hovercontent h1{
+        font-size:24px;
+        line-height:30px;
+    }
+
+    .compus-hovercontent p{
+        font-size:14px;
+    }
+
+}
 
 
                                     /* team member css */
 
 
 .team-member{
-        width:21%;
+      width:21%;
       overflow:hidden;
       position:relative;
       transition:0.4s;
       cursor:pointer;
+      margin-bottom: 20px;
       
 }         
 
@@ -277,6 +372,49 @@
   transform: scale(1.1);
 }
 
+
+/* ================= Tablet ================= */
+
+@media (max-width:1024px){
+
+    .team-member{
+        width:45%;
+    }
+
+    .team-img img{
+        height:260px;
+    }
+
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width:768px){
+
+    .team-member{
+        width:100%;
+    }
+
+    .team-img img{
+        height:280px;
+    }
+
+    .plus-btn{
+        width:40px;
+        height:40px;
+        top:240px;
+        right:10px;
+        font-size:24px;
+    }
+
+    .social-icons{
+        top:120px;
+        right:8px;
+        width:45px;
+        height:110px;
+    }
+
+}
 
 
 
@@ -344,8 +482,6 @@
 
 
 
-
-                                  /* about css */
 
 
 

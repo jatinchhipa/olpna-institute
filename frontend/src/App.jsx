@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from './Components/Home'
 import Course from './Components/Course';
@@ -13,10 +13,20 @@ import Login from './Components/Login';
 import ProtectedRoute from '../auth/ProtectedRoute';
 import Cartpage from './Components/Cartpage';
 import Buynow from './Components/Buynow';
+import MyCourses from "./Components/MyCourses";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration
+      once: true,     // Ek hi baar chale
+    });
+  }, []);
   
 
   return (
@@ -27,7 +37,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/course" element={<Course/>}/>
 
-      
+      <Route path='/coursedetail/:id' element={ <Coursedetail/>}/>
 
       <Route path='/team/:id' element={<Teamintro/>}/>
       <Route path='/blog' element={<Blog/>}/>
@@ -36,13 +46,13 @@ function App() {
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/cartpage' element={<Cartpage/>}/>
-      <Route path='/buynow/:id' element={<Buynow/>}/>
+      
+      <Route path="/mycourses" element={<MyCourses />} />
 
 
       {/* protectroute */}
 
-      <Route path='/coursedetail/:id' element={<ProtectedRoute> <Coursedetail/> </ProtectedRoute>}/>
-
+      <Route path='/buynow/:id' element={<ProtectedRoute><Buynow/></ProtectedRoute>}/>
 
       </Routes>
      

@@ -1,11 +1,14 @@
-import React,{useEffect,useState} from "react";
+import React,{useEffect,useState,useContext} from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-
+import { AuthContext } from "../../auth/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 
 
 function Buynow(){
+    const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
     const { id } = useParams();
     
@@ -28,6 +31,67 @@ function Buynow(){
             }
     
         };
+
+
+        const handlePayment = async () => {
+
+            try{
+                const order = await axios.post("http://localhost:9000/orderpay" , {
+
+                    amount:course.coursePrice
+
+                });
+
+                
+
+               const options = {
+                    key: "rzp_test_TDiixFEL285jw3",
+                    amount: order.data.amount,
+                    currency: order.data.currency,
+                    name: "OLPNA",
+                    description: course.courseName,
+                    order_id: order.data.id,
+
+                    
+
+                handler: async function (response) {
+                    
+                try {
+                    const verify = await axios.post(
+                        "http://localhost:9000/verifypayment",
+                {
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+
+                userId: user._id,
+                courseId: course._id
+                }
+                );
+
+                if (verify.data.success) {
+                alert("Payment Verified Successfully");
+                navigate("/mycourses");        
+            }
+
+            } catch (err) {
+                console.log(err);
+                alert("Payment Verification Failed");
+            }
+
+            },
+
+            }; 
+
+            const razor = new window.Razorpay(options);
+
+                razor.open();
+
+            }catch(err){
+                console.log(err)
+            }
+            
+        } 
 
 
 
@@ -99,7 +163,7 @@ return(
           <div className="w-full p-4 mt-4">
             <p className="text-gray-500 text-sm text-center">Safe And Secure Payment</p>
 
-            <button className="w-full bg-sky-900 text-white px-2 py-2 rounded-lg hover:bg-sky-900/90 cursor-pointer duration-500 mt-3">Pay Now</button>
+            <button  onClick={handlePayment} className="w-full bg-sky-900 text-white px-2 py-2 rounded-lg hover:bg-sky-900/90 cursor-pointer duration-500 mt-3">Pay Now</button>
           </div>       
             
 
