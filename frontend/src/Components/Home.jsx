@@ -126,7 +126,7 @@ return(
 
             <div className="flex flex-col md:flex-row gap-4  mt-8">
               <span className=" border-r-4 border-orange-500 pr-8">
-               <p className="text-md text-gray-500">Sed ut perspiciatis unde omnis<br/> natus error sit voluptatem</p> 
+               <p className="text-md text-gray-500">Learn, grow, and succeed with courses<br/> designed to unlock your full potential.</p> 
               </span>  
 
             <span className="flex items-center gap-5 lg:ml-0 ml-8">
@@ -571,27 +571,27 @@ return(
 
 
 
-    <div className="text-center h-[100px] w-full mt-20"> 
-            <p className="text-lg font-semibold text-orange-500 "> Latest Events </p>
-            <h1 className="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Upcoming Events</h1>
+    <div className="text-center lg:h-[100px] h-[50px] w-full mt-20"> 
+            <p className="text-md lg:text-lg font-semibold text-orange-500 "> Latest Events </p>
+            <h1 className=" text-2xl lg:text-5xl font-bold text-[#062a35] tracking-wide ">Upcoming Events</h1>
     </div>
 
 
 
 
-  <div className= "w-[95%] flex items-center justify-center  mx-auto mt-8 gap-8">  
+  <div className= "w-[95%] flex flex-col lg:flex-row items-center justify-center mx-auto mt-8 gap-8">  
 
-    <div className="w-[60%] event-card">
+    <div className="lg:w-[60%] w-full event-card">
 
         <div className="overflow-hidden">
-         <img src="/event1.jpg"alt="" className="w-full block h-[400px] object-cover transition-transform duration-500" />
+         <img src="/event1.jpg"alt="" className="w-full block h-[250px] sm:h-[300px] lg:h-[400px] object-cover transition-transform duration-500" />
             
        </div>
 
-      <div className="w-full bg-sky-100 h-[300px] p-10">
+      <div className="w-full bg-sky-100 lg:h-[300px] h-auto p-5 lg:p-10">
 
-        <div className="flex gap-5 items-center">
-          <span className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-5 items-center">
+          <span className="flex items-center gap-4 lg:gap-2">
               <FaRegCalendarAlt className="text-orange-500"/>
               <p className="text-md text-gray-500 font-400">30 MAY 2026</p>    
           </span> 
@@ -607,35 +607,35 @@ return(
           </span> 
         </div>
 
-        <h1 className="text-2xl font-bold text-[#062a35] hover:text-orange-500 cursor-pointer duration-200 pt-4">Web Design & Development Conference 2026</h1>
+        <h1 className="text-xl  lg:text-2xl font-bold text-[#062a35] hover:text-orange-500 cursor-pointer duration-200 pt-4">Web Design & Development Conference 2026</h1>
 
         <p className="text-gray-500 text-md pt-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et</p>
 
-        <button className="uparcase h-[50px] w-[180px] bg-orange-500 p-3 font-semibold text-white mt-8 cursor-pointer">join event</button>
+        <button className="uparcase h-[50px] w-[170px] bg-orange-500 p-3 font-semibold text-white mt-6 cursor-pointer">join event</button>
 
       </div>  
 
     </div>
 
 
-  <div className="w-[30%]">
+  <div className=" w-full lg:w-[30%]">
 
     <div className="w-full  relative overflow-hidden shadow-lg">
 
     <img
     src="/event2.jpg"
     alt=""
-    className="w-full h-[350px] object-cover"
+    className="w-full h-[250px] lg:h-[350px] object-cover"
     />
 
     <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/40"></div>
 
-    <div className="absolute top-5 right-5 bg-orange-500 text-white w-[70px] h-[70px] flex items-center justify-center rounded-full text-xl font-bold">
+    <div className="absolute top-5 right-5 bg-orange-500 text-white h-[60px] w-[60px] lg:w-[70px] lg:h-[70px] flex items-center justify-center rounded-full text-xl font-bold">
     $20
    </div>
   
     <div className="absolute text-white bottom-5 left-5">
-      <div className="flex items-center gap-4 mb-3">
+      <div className="flex  items-center gap-4 mb-3">
         <span className="flex items-center gap-2">
             <FaRegCalendarAlt className="text-orange-500"/>
             <p className="text-md  font-400">30 MAY 2026</p>    
@@ -647,7 +647,7 @@ return(
         </span>
       </div>
 
-      <h1 className="font-bold text-xl hover:text-orange-500 cursor-pointer duration-200 ">Annual Conference 2020</h1>
+      <h1 className="font-bold text-lg lg:text-xl hover:text-orange-500 cursor-pointer duration-200 ">Annual Conference 2020</h1>
 
       <button className=" font-semibold text-white mt-4 cursor-pointer">join event-- </button>
 
@@ -662,12 +662,12 @@ return(
     <img
     src="/event3.jpg"
     alt=""
-    className="w-full h-[350px] object-cover"
+    className="w-full h-[250px] lg:h-[350px] object-cover"
     />
 
     <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/40"></div>
 
-    <div className="absolute top-5 right-5 bg-orange-500 text-white w-[70px] h-[70px] flex items-center justify-center rounded-full text-xl font-bold">
+    <div className="absolute top-5 right-5 bg-orange-500 text-white w-[60px] h-[60px] lg:w-[70px] lg:h-[70px] flex items-center justify-center rounded-full text-xl font-bold">
     $20
    </div>
   
@@ -684,9 +684,9 @@ return(
         </span>
       </div>
 
-      <h1 className="font-bold text-xl hover:text-orange-500 cursor-pointer duration-200 ">Annual Conference 2020</h1>
+      <h1 className="font-bold text-lg lg:text-xl hover:text-orange-500 cursor-pointer duration-200 ">Annual Conference 2020</h1>
 
-      <button className=" font-semibold text-white mt-4 cursor-pointer">join event-- </button>
+      <button className=" font-semibold text-white mt-4  cursor-pointer">join event-- </button>
 
     </div>
 
@@ -696,8 +696,8 @@ return(
 
 </div>
 
-        <div className="w-full h-[250px] items-center justify-center flex">
-            <button className=" text-md h-[50px] w-[180px]  p-3 hover:font-semibold text-sky-800 mt-8 cursor-pointer hover:bg-orange-500 hover:text-white border border-gray-400 duration-600">VIEW ALL EVENTS</button>
+        <div className="w-full  h-[200px]  items-center justify-center flex">
+            <button className=" text-md  lg:h-[50px] lg:w-[180px]  p-3 hover:font-semibold text-sky-800 mt-8 cursor-pointer hover:bg-orange-500 hover:text-white border border-gray-400 duration-600">VIEW ALL EVENTS</button>
         </div>
 
 
@@ -705,20 +705,20 @@ return(
 
     <div className="stu-feedback pt-20">
 
-      <div className="text-center h-[100px] w-full"> 
-            <p className="text-lg font-semibold text-white "> Students Feedback   </p>
-            <h1 className="pt-2 text-5xl font-bold text-white tracking-wide ">What Our Students Say</h1>
+      <div className="text-center h-[50px] lg:h-[100px] w-full"> 
+            <p className="text-md lg:text-lg font-semibold text-orange-400 "> Students Feedback   </p>
+            <h1 className="lg:pt-2 text-2xl lg:text-5xl font-bold text-white tracking-wide ">What Our Students Say</h1>
       </div> 
 
 
-      <div className="w-[95%] flex mt-8 gap-8">
+      <div className="w-[95%] mx-auto flex flex-col lg:flex-row items-center gap-8 mt-8">
         
-        <div className="w-[55%]">
+        <div className="w-full lg:w-[55%]">
             <Feedswiper/>
         </div>
 
-        <div className="w-[40%] pl-5">
-          <img src="/feed2.png" alt="" />
+        <div className="w-full lg:w-[40%] justify-center flex">
+          <img src="/feed2.png" alt="" className="w-full max-w-[500px] h-auto object-contain"/>
         </div>
 
       </div>
@@ -726,27 +726,27 @@ return(
     </div>  
 
 
-    <div className="w-full h-[700px] bg-sky-100 p-15 flex justify-between">
+    <div className="w-full h-auto bg-sky-100 p-10 lg:p-15 flex flex-col lg:flex-row justify-between mt-5">
 
-      <div className="w-[50%]">
+      <div className="lg:w-[50%] w-full">
           <img src="/instruck.png" alt="" />
       </div>
 
-    <div className="w-[43%] mt-10">
+    <div className="lg:w-[43%] w-full mt-10">
       <p className="text-md text-orange-600 font-bold"> Build A Career</p>
-      <h1 className="text-5xl font-bold  text-[#062a35] pt-4">Become an Instructor</h1>
+      <h1 className="lg:text-5xl text-3xl font-bold  text-[#062a35] pt-2">Become an Instructor</h1>
       <p className="text-gray-500 text-md pt-4">Sed ut perspiciati unde omnis iste natus error sit voluptatem accusanc tium doloremque laudantium, totam rem aperiam, eaque ipsa quae abillo inventore veritatis et quasi architecto beatae vitae dicta sun</p>
 
 
-      <div className="w-full flex items-center justify-between mt-8">
-        <div className="w-[50%] border-r border-r-gray-400">
+      <div className="w-full flex items-center justify-between mt-5 lg:gap-0 gap-3">
+        <div className="lg:w-[50%] w-full border-r border-r-gray-400">
           <PiSuitcaseSimple  className="text-6xl text-orange-600"/>
 
           <p className=" text-[#062a35] text-xl font-bold pt-2">Digitalization</p>  
           <p className="text-gray-500 text-md pt-2">Sed ut perspia unde omnis aste natus error sit volu</p>
         </div>
 
-         <div className="w-[40%]">
+         <div className="lg:w-[40%] w-full">
           <LuBookUser className="text-6xl text-orange-600"/>
 
           <p className=" text-[#062a35] text-xl font-bold pt-2">Book Friendly</p>  
@@ -757,11 +757,11 @@ return(
 
           <div className="flex itmes-center gap-5 mt-8"> 
            <a href="/contact"> 
-            <button class=" h-[50px] w-[180px] bg-orange-600 p-3 font-semibold text-white mt-8 cursor-pointer hover:bg-[#062a35] duration-400">JOIN WITH US</button>
+            <button class="h-[40px] w-[120px] lg:h-[50px] lg:w-[180px] bg-orange-600 p-2 font-semibold text-white mt-8 cursor-pointer hover:bg-[#062a35] duration-400  text-sm lg:text-md">JOIN WITH US</button>
             </a>
 
 
-            <button class=" h-[50px] w-[180px] bg-white hover:bg-orange-500 p-3 font-semibold text-[#062a35] hover:text-white mt-8 cursor-pointer duration-400 text-sm">BECOME A PARTNER</button>
+            <button class="h-[40px] w-[150px] lg:h-[50px] lg:w-[180px] bg-white hover:bg-orange-500 p-2 font-semibold text-[#062a35] hover:text-white mt-8 cursor-pointer duration-400 text-sm">BECOME A PARTNER</button>
           </div>  
 
     </div> 
@@ -769,28 +769,28 @@ return(
     </div>
 
 
-    <div class="text-center h-[100px] w-full mt-20">
+    <div class="text-center h-[50px] lg:h-[100px] w-full mt-15">
     <p class="text-lg font-semibold text-orange-500 "> Artices & Tipes </p>
-    <h1 class="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Latest News & Blog</h1>
+    <h1 class=" text-2xl lg:text-5xl font-bold text-[#062a35] tracking-wide ">Latest News & Blog</h1>
     </div>
 
 
 
 
-    <div className="w-full h-[750px] flex items-center gap-8 justify-center mt-8">
+    <div className="w-full min-h-[650px] lg:h-[750px] flex flex-col lg:flex-row items-center gap-8 justify-center mt-8">
 
-      <div className="w-[28%] "> 
+      <div className="lg:w-[28%] w-full p-3"> 
 
         <a href="/blog">
-        <img src="/bimg3.jpg"  class="hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
+        <img src="/bimg3.jpg"  class="w-full h-[250px] lg:h-[350px] object-cover hover:-translate-y-2 transition-all duration-300  cursor-pointer"/>
         </a>
 
         <div className="border border-gray-300">
 
           <div className="flex items-center gap-4 pl-7 pt-4">
            <div className="flex items-center gap-3">
-              <FaRegCalendarAlt className="text-orange-500 text-xl"/>
-              <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
+              <FaRegCalendarAlt className="text-orange-500 lg:text-xl text-lg"/>
+              <p className="text-sm lg:text-md font-semibold text-gray-500">7 JUNE 2026</p>
            </div>
 
            <div className="flex items-center gap-3">
@@ -799,16 +799,16 @@ return(
            </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog">Learning Resources In Challenec Times Online Workshops </a> </h2>
+          <h2 className="lg:text-xl text-lg font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog">Learning Resources In Challenec Times Online Workshops </a> </h2>
 
           <div className="flex items-center gap-3 pl-7 mt-5">
              <img src="/g.png" alt="" /> 
-             <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
+             <p className="text-md lg:text-lg font-semibold text-orange-600">Pooja Sharma</p>
           </div>
 
           <a href="/blog">
-          <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
-            <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
+          <button className="w-[60px] h-[50px] lg:w-[70px] lg:h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="lg:text-2xl text-xl text-white mx-auto lg:mt-5 mt-4"/>
           </button>
           </a>
         </div>
@@ -816,18 +816,18 @@ return(
       </div>
 
 
-       <div className="w-[28%] "> 
+       <div className="lg:w-[28%] w-full p-3"> 
 
         <a href="/blog">
-        <img src="/bimg2.jpg"  class="hover:-translate-y-2 transition-all duration-300 object-cover cursor-pointer"/>
+        <img src="/bimg2.jpg"  class="w-full h-[250px] lg:h-[350px] hover:-translate-y-2 transition-all duration-300 object-cover cursor-pointer"/>
         </a>
 
         <div className="border border-gray-300">
 
           <div className="flex items-center gap-4 pl-7 pt-4">
            <div className="flex items-center gap-3">
-              <FaRegCalendarAlt className="text-orange-500 text-xl"/>
-              <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
+              <FaRegCalendarAlt className="text-orange-500 lg:text-xl text-lg"/>
+              <p className="text-sm lg:text-md font-semibold text-gray-500">7 JUNE 2026</p>
            </div>
 
            <div className="flex items-center gap-3">
@@ -836,16 +836,16 @@ return(
            </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog"> Djang Models Admin And Harness Rela Tional Database </a></h2>
+          <h2 className="lg:text-xl text-lg font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog"> Djang Models Admin And Harness Rela Tional Database </a></h2>
 
           <div className="flex items-center gap-3 pl-7 mt-5">
              <img src="/g.png" alt="" /> 
-             <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
+             <p className="lg:text-lg text-sm font-semibold text-orange-600">Aaditay Sharma</p>
           </div>
 
           <a href="/blog">
-          <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
-            <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
+          <button className="lg:w-[70px] lg:h-[60px] w-[60px] h-[50px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="lg:text-2xl text-xl text-white mx-auto mt-4 lg:mt-5"/>
           </button>
           </a>
 
@@ -855,35 +855,35 @@ return(
 
 
 
-       <div className="w-[28%] "> 
+       <div className="lg:w-[28%] w-full p-3"> 
 
         <a href="/blog">
-        <img src="/bimg1.jpg"  class="hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
+        <img src="/bimg1.jpg"  className="w-full h-[250px] lg:h-[350px] hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
         </a>
         <div className="border border-gray-300">
 
           <div className="flex items-center gap-4 pl-7 pt-4">
            <div className="flex items-center gap-3">
-              <FaRegCalendarAlt className="text-orange-500 text-xl"/>
-              <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
+              <FaRegCalendarAlt className="text-orange-500 lg:text-xl text-lg"/>
+              <p className="lg:text-md text-sm font-semibold text-gray-500">7 JUNE 2026</p>
            </div>
 
            <div className="flex items-center gap-3">
-              <FaRegComments className="text-orange-500 text-xl"/>
-              <p className="text-md font-semibold text-gray-500">COM(30)</p>
+              <FaRegComments className="text-orange-500 lg:text-xl text-lg"/>
+              <p className="lg:text-md text-sm font-semibold text-gray-500">COM(30)</p>
            </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog"> Smash Podcast With Laura Kalbag What Is Online Privacy</a></h2>
+          <h2 className="lg:text-xl text-lg font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog"> Smash Podcast With Laura Kalbag What Is Online Privacy</a></h2>
 
           <div className="flex items-center gap-3 pl-7 mt-5">
              <img src="/g.png" alt="" /> 
-             <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
+             <p className="lg:text-lg text-sm font-semibold text-orange-600">karan</p>
           </div>
 
           <a href="/blog">
-          <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
-            <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
+          <button className="lg:w-[70px] lg:h-[60px] w-[60px] h-[50px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="lg:text-2xl text-xl text-white mx-auto lg:mt-5 mt-4"/>
           </button>
           </a>
 
@@ -895,7 +895,7 @@ return(
 
 
 
-    <div className=" h-[180px] bg-orange-700 pt-12 pl-12">
+    <div className=" lg:h-[180px] h-[100px] bg-orange-700 lg:pt-10 lg:pl-12 pt-5 pl-5">
         <Imgswiper/>
     </div>
 

@@ -30,7 +30,7 @@ export default function Imgswiper() {
       >
         <SwiperSlide >
            
-            <div className='w-[100%]  flex justify-center gap-8'>
+            <div className='w-full flex justify-center items-center gap-2 sm:gap-4 md:gap-8 overflow-x-auto'>
 
             <div className='w-[15%]'>
                    <img src="/l1.png" alt="" /> 
@@ -61,26 +61,26 @@ export default function Imgswiper() {
 
 
         <SwiperSlide>
-            <div className='w-[100%]  flex justify-center gap-8'>
+            <div className='w-full flex justify-center items-center gap-2 sm:gap-4 md:gap-8 overflow-x-auto'>
 
             <div className='w-[15%]'>
-                   <img src="/l5.png" alt="" /> 
+                   <img src="/l5.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div>  
 
             <div className='w-[15%]'>
-                   <img src="/l2.png" alt="" /> 
+                   <img src="/l2.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div> 
 
             <div className='w-[15%]'>
-                   <img src="/l3.png" alt="" /> 
+                   <img src="/l3.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div> 
 
             <div className='w-[15%]'>
-                   <img src="/l4.png" alt="" /> 
+                   <img src="/l4.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div> 
 
             <div className='w-[15%]'>
-                   <img src="/l5.png" alt="" /> 
+                   <img src="/l5.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div>  
                
            </div> 
@@ -88,26 +88,26 @@ export default function Imgswiper() {
 
 
         <SwiperSlide>
-            <div className='w-[100%]  flex justify-center gap-8'>
+            <div className='w-full flex justify-center items-center gap-2 sm:gap-4 md:gap-8 overflow-x-auto'>
 
             <div className='w-[15%]'>
-                   <img src="/l4.png" alt="" /> 
+                   <img src="/l4.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div>  
 
             <div className='w-[15%]'>
-                   <img src="/l4.png" alt="" /> 
+                   <img src="/l4.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div> 
 
             <div className='w-[15%]'>
-                   <img src="/l3.png" alt="" /> 
+                   <img src="/l3.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div> 
 
             <div className='w-[15%]'>
-                   <img src="/l2.png" alt="" /> 
+                   <img src="/l2.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div> 
 
             <div className='w-[15%]'>
-                   <img src="/l1.png" alt="" /> 
+                   <img src="/l1.png" alt="" className='w-16 sm:w-20 md:w-28 lg:w-30 h-auto flex-shrink-0 object-contain'/> 
             </div>  
                
            </div> 
