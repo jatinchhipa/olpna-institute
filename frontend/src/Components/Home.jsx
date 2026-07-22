@@ -28,7 +28,7 @@ import Navbar from "./Navbar";
 
 import axios from 'axios';
 
-
+import { TypeAnimation } from "react-type-animation";
 
 
 
@@ -117,7 +117,18 @@ return(
           <div className="w-full lg:w-1/2 text-center lg:text-left">  
               <p data-aos="fade-down" className="text-sm md:text-base text-orange-400 font-semibold">Welcome To EduPlus</p>
 
-              <h1 data-aos="fade-left" className="text-4xl sm:text-5xl lg:text-6xl font-bold text-sky-900 italic font-serif leading-tight ">More than 1200 Online Courses</h1>
+              {/* <h1 data-aos="fade-left" className="text-4xl sm:text-5xl lg:text-6xl font-bold text-sky-900 italic font-serif leading-tight ">More than 1200 Online Courses</h1> */}
+
+              <TypeAnimation
+                    sequence={[
+                            "More than 1200 Online Courses", // Type hoga
+                            ]}
+                    speed={30}
+                    cursor={true}
+                    repeat={0}
+                    wrapper="h1"
+                    className="text-4xl sm:text-5xl lg:text-6xl font-bold text-sky-900 italic font-serif leading-tight "
+              />
 
               <div className="mt-8 w-full bg-white rounded-lg shadow-md flex items-center justify-between p-3">
                   <input type="text" placeholder=" Search Course" className="w-full text-base md:text-lg outline-none"/>
@@ -143,7 +154,7 @@ return(
 
           </div>
 
-          <div className="w-full lg:w-1/2 flex justify-center">
+          <div data-aos="fade-right" className="w-full lg:w-1/2 flex justify-center">
               <img src="/herogirl.png" alt="" className="w-full max-w-md lg:max-w-xl lg:pl-0 pl-12" />
           </div>
       </div>

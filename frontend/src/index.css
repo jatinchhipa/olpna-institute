@@ -486,15 +486,26 @@ html {
                                    /* course page    */
 
 .course-hero{
- width: 100%;
-  height: 450px;
+  width:100%;
+  height:450px;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.644)),
+    linear-gradient(rgba(0,0,0,0.589), rgba(0,0,0,0.644)),
     url("/coursehero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+@media (max-width:768px){
+  .course-hero{
+    height:280px;
+  }
+}
+
+@media (max-width:480px){
+  .course-hero{
+    height:220px;
+  }
 }
 
 
@@ -515,6 +526,18 @@ html {
   background-position: center;
   background-repeat: no-repeat;
 
+}
+
+@media (max-width:768px){
+  .blog-hero{
+    height:280px;
+  }
+}
+
+@media (max-width:480px){
+  .blog-hero{
+    height:220px;
+  }
 }
 
 

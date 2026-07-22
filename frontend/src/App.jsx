@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1200, // Animation duration
+      duration: 1000, // Animation duration
       once: true,     // Ek hi baar chale
     });
   }, []);

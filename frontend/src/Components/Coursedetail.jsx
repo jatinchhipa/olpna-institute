@@ -107,30 +107,30 @@ function Coursedetail(){
        <Navbar/> 
 
     <div className="course-hero  flex flex-col justify-center items-center">
-        <h1 className="text-8xl text-white font-bold "> Course Details</h1>  
-        <p className="text-white text-2xl bold ">Home / Courses</p>
+        <h1 className="lg:text-8xl text-4xl text-white font-bold "> Course Details</h1>  
+        <p className="text-white text-lg lg:text-2xl bold ">Home / Courses</p>
     </div>  
 
-    <div className="w-[90%]  flex ml-20 mt-20 gap-8">
+    <div className="w-[90%]  flex flex-col lg:flex-row mx-auto mt-10 lg:mt-20 gap-8">
 
-    <div className="w-[65%]">
+    <div className="lg:w-[65%] w-full">
 
         <div className="w-full relative">
         <img src="/cd.jpg" alt="" />    
         <a href="//www.youtube.com">
-        <FaYoutube className="w-[80px] h-[70px] bg-red-600 text-white  p-5 absolute top-[190px] right-[340px] rounded-xl transition-all duration-500 hover:scale-110"/>
+        <FaYoutube className="lg;w-[80px] lg:h-[70px] w-[50px] h-[40px] bg-red-600 text-white p-2 lg:p-5 absolute lg:top-[190px] lg:right-[340px] top-20 right-35 rounded-xl transition-all duration-500 hover:scale-110"/>
         </a>
         </div> 
 
 
         <div className="w-full items-center mt-10">
 
-          <h1 className="text-3xl font-bold text-[#062a35]">How To Improve Wed Design Skills</h1> 
+          <h1 className="lg:text-3xl text-xl font-bold text-[#062a35]">How To Improve Wed Design Skills</h1> 
 
-          <p className="text-[15px] text-gray-500 leading-7 pt-5 text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p> 
+          <p className="text-[15px] text-gray-500 lg:leading-7 pt-2 lg:pt-5 text-justify">Improving web design skills requires consistent practice, creativity, and a willingness to learn new technologies. Start by mastering the fundamentals of HTML, CSS, and JavaScript, then explore modern frameworks like React and Tailwind CSS. Study well-designed websites to understand layout, typography, color theory, and user experience principles. Build real-world projects to strengthen your skills and create a professional portfolio. Stay updated with the latest design trends, responsive design techniques, and accessibility standards. Seek feedback from other designers, refine your work regularly, and never stop experimenting. Continuous learning and hands-on experience are the keys to becoming a confident and successful web designer.</p> 
 
-          <h1 className="text-3xl font-bold text-[#062a35] pt-8">Curriculum</h1>
-          <p className="text-[15px] text-gray-500 leading-7 pt-5 text-justify">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam</p>
+          <h1 className="lg:text-3xl text-xl font-bold text-[#062a35] pt-5 lg:pt-8">Curriculum</h1>
+          <p className="text-[15px] text-gray-500 lg:leading-7 pt-2 lg:pt-5 text-justify">Our curriculum is carefully designed to provide a complete and practical learning experience for students of all skill levels. It combines strong theoretical concepts with hands-on projects, interactive lessons, and real-world applications to ensure effective understanding. </p>
 
 
           <ul className="mt-5">
@@ -157,12 +157,12 @@ function Coursedetail(){
           </ul>
 
 
-          <img src="/cd2.jpg" alt="" className="mt-15"/>
+          <img src="/cd2.jpg" alt="" className="mt-10 lg:mt-15"/>
 
 
-          <h2 className="text-3xl font-bold text-[#062a35] mt-10">Frequently Asked Questions</h2>
+          <h2 className="lg:text-3xl text-xl font-bold text-[#062a35] mt-10">Frequently Asked Questions</h2>
 
-          <p className="text-[15px] text-gray-500 leading-7 pt-5 text-justify">Wuisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam</p>
+          <p className="text-[15px] text-gray-500 lg:leading-7 lg:pt-5 pt-2 text-justify">Find answers to the most commonly asked questions about our courses, enrollment process, payments, certifications, and learning experience. Our Frequently Asked Questions section is designed to provide clear and helpful information, making it easy for you to get started with confidence. </p>
 
         </div>
 
@@ -178,12 +178,12 @@ function Coursedetail(){
             return(
                
                 
-           <div key={item._id} className="w-[48%] h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
+           <div key={item._id} className=" w-full lg:w-[48%] h-[300px] lg:h-[350px] border border-gray-200 justify-center flex flex-col items-center cursor-pointer">
               <Link to={`/team/${item._id}`}> 
-                <img src={`http://localhost:9000/uploads/${item.professorImg}`} alt={item.professorImg} className="w-[190px] h-[190px] rounded-full object-cover"/>
+                <img src={`http://localhost:9000/uploads/${item.professorImg}`} alt={item.professorImg} className="lg:w-[190px] lg:h-[190px] w-[150px] h-[150px] rounded-full object-cover"/>
 
-                <h1 className="text-xl font-bold text-[#062a35] pt-5 ">{item.name}</h1>
-                <p className="text-gray-400 text-sm">Math Teacher</p>
+                <h1 className="text-xl font-bold text-[#062a35] pt-5 text-center">{item.name}</h1>
+                <p className="text-gray-400 text-sm text-center">Math Teacher</p>
                </Link>  
            </div>  
                
@@ -199,11 +199,11 @@ function Coursedetail(){
 
 
 
-    <div className="w-[30%]">
+    <div className="w-full lg:w-[30%]">
 
-       <div className="w-full border border-gray-300 min-h-[650px] p-8 ">
+       <div className="w-full border border-gray-300 min-h-[600px] lg:p-8 p-6">
 
-        <div className="flex items-center justify-between mt-5 h-[50px]">
+        <div className="flex items-center justify-between mt-5 h-[40px] lg:h-[50px]">
             <span className="flex items-center gap-1">
                 <HiOutlineCurrencyDollar  className="text-orange-500 text-xl"/>
                 <p className="text-[#062a35] font-semibold text-md">Course Price</p>
@@ -216,7 +216,7 @@ function Coursedetail(){
         </div>   
          
 
-        <div className="flex items-center justify-between mt-5 h-[50px] border-t border-t-gray-200">
+        <div className="flex items-center justify-between mt-5 h-[40px] lg:h-[50px] border-t border-t-gray-200">
             <span className="flex items-center gap-1">
                 <IoIosContact className="text-orange-500 text-xl"/>
                 <p className="text-[#062a35] font-semibold text-md">Instructor</p>
@@ -276,12 +276,15 @@ function Coursedetail(){
         </div> 
 
 
+           <div className="w-full flex lg:flex-col flex-row gap-3">
+
           <Link to={`/buynow/${course._id}`}>
-            <button className="w-[210px] h-[55px] bg-sky-600 text-white font-semibold rounded-full ml-10 mt-10 cursor-pointer hover:bg-orange-500 duration-300">Buy Now</button>
+            <button className="lg:w-[210px] lg:h-[55px] w-[140px] h-[40px] bg-sky-600 text-white font-semibold rounded-full lg:ml-10 mt-10 cursor-pointer hover:bg-orange-500 duration-300">Buy Now</button>
           </Link>  
 
-            <button onClick={() => addToCart(course._id)} className="w-[210px] h-[55px] bg-red-600 text-white font-semibold rounded-full ml-10 mt-5 cursor-pointer hover:bg-orange-500 duration-300">Add To Cart</button>
-  
+            <button onClick={() => addToCart(course._id)} className="lg:w-[210px] lg:h-[55px] w-[140px] h-[40px] bg-red-600 text-white font-semibold rounded-full lg:ml-10 mt-10 lg:mt-5 cursor-pointer hover:bg-orange-500 duration-300">Add To Cart</button>
+            
+           </div>  
 
        </div>  
 
@@ -298,7 +301,7 @@ function Coursedetail(){
 
           
         
-    <div className="mt-20 h-[180px] bg-orange-700 pt-12 pl-12">
+    <div className=" lg:h-[180px] h-[100px] bg-orange-700 lg:pt-10 lg:pl-12 pt-5 pl-5 lg:mt-5 mt-5">
         <Imgswiper/>
     </div>  
 

@@ -18,6 +18,32 @@ import axios from 'axios';
 
 function Course(){
 
+  const [course , setCourse] = useState([]);
+  
+  
+       useEffect(()=>{
+  
+          fetchcourse();
+       },[]) 
+  
+  
+       const fetchcourse = async()=>{
+  
+          try{
+  
+            const res = await axios.get('http://localhost:9000/getcourse',course);
+  
+            setCourse(res.data);
+  
+          }catch(err){
+            console.log(err);
+          }
+  
+       };
+
+
+
+
     const[professor , setProfessor]=useState([]);
       
       useEffect(()=>{
@@ -43,415 +69,54 @@ function Course(){
     <>
         <Navbar/>
 
-       <div className="course-hero  flex flex-col justify-center items-center">
-          <h1 className="text-8xl text-white font-bold ">Our Courses</h1>  
-            <p className="text-white text-2xl bold ">Home / Courses</p>
+       <div data-aos="fade-right" className="course-hero  flex flex-col justify-center items-center">
+          <h1 className="lg:text-8xl text-4xl text-white font-bold shadow-xl">Our Courses</h1>  
+            <p className="text-white lg:text-2xl text-lg bold lg:pt-5 pt-2">Home / Courses</p>
         </div>  
 
 
 
+       <div className="w-[90%] mx-auto mt-6 lg:mt-10 px-2 md:px-0 mb-4 lg:mb-0">
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  md:justify-between gap-y-5">
 
+        {course.map((item)=>{
 
-       <div className= "w-[90%] flex items-center justify-center flex-wrap mx-auto mt-20 gap-10">
-       
-               <div className="course-card">
-       
-                 <div className="course-img">
-                   <img src="/coursec1.jpg"/>
-                 </div>
-       
-                 <div className=" p-5 h-[200px] ">
-       
-                   <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
-       
-                   <h1 className="text-xl text-[#062a35] font-[700] pt-2">Best Courses For Learning English Courses</h1>
-       
-                   <div className="flex item-center gap-10  pt-4">
-                     <span className="flex items-center gap-1">
-                     <HiOutlineUsers className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">25</p>
-                     </span>
-       
-                      <span className="flex items-center gap-1">
-                    <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">36hr</p>
-                     </span>
-       
-                     <span className="flex items-center gap-1">
-                     <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">2.5k</p>
-                     </span>
-                 
-                   </div>
-       
-                 </div>
-       
-       
-             <div className="hover-content">
-       
-               <button className="business-btn">BUSINESS</button>
-       
-               <h2>Best Courses For Learning English Courses</h2>
-       
-              <div className="teacher-box">
-       
-             <div className="teacher">
-               <img src="/teacher.png" alt="" />
-               <span>Warner</span>
-             </div>
-       
-             <div className="price">$59.95</div>
-       
-             </div> 
-       
-              <p>
-             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-           </p>
-       
-           <button className="enroll-btn">
-             GET ENROLLED →
-           </button>
-       
-             </div>  
-       
-           </div>
-       
-       
-       
-           <div className="course-card">
-       
-                 <div className="course-img">
-                   <img src="/coursec2.jpg"/>
-                 </div>
-       
-                 <div className=" p-5 h-[200px]">
-       
-                   <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
-       
-                   <h1 className="text-xl text-[#062a35] font-[700] pt-2">Best Courses For Learning English Courses</h1>
-       
-                   <div className="flex item-center gap-10  pt-4">
-                     <span className="flex items-center gap-1">
-                     <HiOutlineUsers className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">25</p>
-                     </span>
-       
-                      <span className="flex items-center gap-1">
-                    <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">36hr</p>
-                     </span>
-       
-                     <span className="flex items-center gap-1">
-                     <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">2.5k</p>
-                     </span>
-                 
-                   </div>
-       
-                 </div>
-       
-       
-             <div className="hover-content">
-       
-               <button className="business-btn">BUSINESS</button>
-       
-               <h2>Best Courses For Learning English Courses</h2>
-       
-              <div className="teacher-box">
-       
-             <div className="teacher">
-               <img src="/teacher.png" alt="" />
-               <span>Warner</span>
-             </div>
-       
-             <div className="price">$59.95</div>
-       
-             </div> 
-       
-              <p>
-             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-           </p>
-       
-           <button className="enroll-btn">
-             GET ENROLLED →
-           </button>
-       
-             </div>  
-       
-       
-           </div>
-       
-       
-       
-       
-         <div className="course-card">
-       
-                 <div className="course-img">
-                   <img src="/course7.jpg" />
-                 </div>
-       
-                 <div className=" p-5 h-[200px]">
-       
-                   <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
-       
-                   <h1 className="text-xl text-[#062a35] font-[700] pt-2">Best Courses For Learning English Courses</h1>
-       
-                   <div className="flex item-center gap-10  pt-4">
-                     <span className="flex items-center gap-1">
-                     <HiOutlineUsers className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">25</p>
-                     </span>
-       
-                      <span className="flex items-center gap-1">
-                    <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">36hr</p>
-                     </span>
-       
-                     <span className="flex items-center gap-1">
-                     <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">2.5k</p>
-                     </span>
-                 
-                   </div>
-       
-                 </div>
-       
-       
-             <div className="hover-content">
-       
-               <button className="business-btn">BUSINESS</button>
-       
-               <h2>Best Courses For Learning English Courses</h2>
-       
-              <div className="teacher-box">
-       
-             <div className="teacher">
-               <img src="/teacher.png" alt="" />
-               <span>Warner</span>
-             </div>
-       
-             <div className="price">$59.95</div>
-       
-             </div> 
-       
-              <p>
-             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-           </p>
-       
-           <button className="enroll-btn">
-             GET ENROLLED →
-           </button>
-       
-             </div>  
-       
-         </div>
+          return(
 
+        <div key={item._id}  className="w-[95%] lg:w-[95%] lg:gap-5 h-[350px] lg:h-[365px] border border-gray-300 rounded mt-5 lg:mt-2 ml-2 lg:ml-0">
+          
+         <a href={`/coursedetail/${item._id}`}>
+          <img src={`http://localhost:9000/uploads/${item.courseImg}`} alt={item.courseImg} className="hover:-translate-y-2 transition-all duration-300 rounded object-cover cursor-pointer w-full h-[200px]"/> 
 
-         <div className="course-card">
-       
-                 <div className="course-img">
-                   <img src="/course2.jpg" />
-                 </div>
-       
-                 <div className=" p-5 h-[200px]">
-       
-                   <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
-       
-                   <h1 className="text-xl text-[#062a35] font-[700] pt-2">Best Courses For Learning English Courses</h1>
-       
-                   <div className="flex item-center gap-10  pt-4">
-                     <span className="flex items-center gap-1">
-                     <HiOutlineUsers className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">25</p>
-                     </span>
-       
-                      <span className="flex items-center gap-1">
-                    <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">36hr</p>
-                     </span>
-       
-                     <span className="flex items-center gap-1">
-                     <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">2.5k</p>
-                     </span>
-                 
-                   </div>
-       
-                 </div>
-       
-       
-             <div className="hover-content">
-       
-               <button className="business-btn">BUSINESS</button>
-       
-               <h2>Best Courses For Learning English Courses</h2>
-       
-              <div className="teacher-box">
-       
-             <div className="teacher">
-               <img src="/teacher.png" alt="" />
-               <span>Warner</span>
-             </div>
-       
-             <div className="price">$59.95</div>
-       
-             </div> 
-       
-              <p>
-             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-           </p>
-       
-           <button className="enroll-btn">
-             GET ENROLLED →
-           </button>
-       
-             </div>  
-       
-         </div>
+          <div className="p-3">
+              <p className="text-lg font-bold text-[#062a35] mt-4 hover:text-orange-500 cursor-pointer line-clamp-2 h-[40px]">{item.courseName}</p>
+              <p className="text-gray-500 text-[15px] leading-5 line-clamp-2 h-[30px]">{item.courseDetail}</p>
 
+            <div className="flex justify-between">  
+              <div className="flex items-center gap-2 bg-orange-100/50 px-3 py-2 ">
+                <HiOutlineUsers className="text-orange-500 text-lg"/>
+                <span className="text-sm font-medium">{item.student} Students</span>
+              </div>
 
+              <div className="flex items-center gap-2 bg-orange-100/50 px-3 py-2 ">
+                <HiOutlineUsers className="text-orange-500 text-lg"/>
+                <span className="text-sm font-medium">{item.courseNumber}</span>
+              </div>
+            </div> 
 
+          </div>
+          </a> 
+        </div> 
 
+          )
 
+        })
+        }
 
+        
 
-
-         <div className="course-card">
-       
-                 <div className="course-img">
-                   <img src="/course6.jpg" />
-                 </div>
-       
-                 <div className=" p-5 h-[200px]">
-       
-                   <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
-       
-                   <h1 className="text-xl text-[#062a35] font-[700] pt-2">Best Courses For Learning English Courses</h1>
-       
-                   <div className="flex item-center gap-10  pt-4">
-                     <span className="flex items-center gap-1">
-                     <HiOutlineUsers className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">25</p>
-                     </span>
-       
-                      <span className="flex items-center gap-1">
-                    <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">36hr</p>
-                     </span>
-       
-                     <span className="flex items-center gap-1">
-                     <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">2.5k</p>
-                     </span>
-                 
-                   </div>
-       
-                 </div>
-       
-       
-             <div className="hover-content">
-       
-               <button className="business-btn">BUSINESS</button>
-       
-               <h2>Best Courses For Learning English Courses</h2>
-       
-              <div className="teacher-box">
-       
-             <div className="teacher">
-               <img src="/teacher.png" alt="" />
-               <span>Warner</span>
-             </div>
-       
-             <div className="price">$59.95</div>
-       
-             </div> 
-       
-              <p>
-             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-           </p>
-       
-           <button className="enroll-btn">
-             GET ENROLLED →
-           </button>
-       
-             </div>  
-       
-         </div>      
-
-
-
-         <div className="course-card">
-       
-                 <div className="course-img">
-                   <img src="/course4.jpg" />
-                 </div>
-       
-                 <div className=" p-5 h-[200px]">
-       
-                   <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
-       
-                   <h1 className="text-xl text-[#062a35] font-[700] pt-2">Best Courses For Learning English Courses</h1>
-       
-                   <div className="flex item-center gap-10  pt-4">
-                     <span className="flex items-center gap-1">
-                     <HiOutlineUsers className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">25</p>
-                     </span>
-       
-                      <span className="flex items-center gap-1">
-                    <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">36hr</p>
-                     </span>
-       
-                     <span className="flex items-center gap-1">
-                     <LuBookAudio className="text-orange-600"/>
-                     <p className="text-sm text-gray-500">2.5k</p>
-                     </span>
-                 
-                   </div>
-       
-                 </div>
-       
-       
-             <div className="hover-content">
-       
-               <button className="business-btn">BUSINESS</button>
-       
-               <h2>Best Courses For Learning English Courses</h2>
-       
-              <div className="teacher-box">
-       
-             <div className="teacher">
-               <img src="/teacher.png" alt="" />
-               <span>Warner</span>
-             </div>
-       
-             <div className="price">$59.95</div>
-       
-             </div> 
-       
-              <p>
-             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-           </p>
-       
-           <button className="enroll-btn">
-             GET ENROLLED →
-           </button>
-       
-             </div>  
-       
-         </div> 
-
-
-        <div className="flex justify-center items-center mt-10">
-
-        <a href="/Course">   
-        <button className="bg-orange-500 text-white px-8 py-4 font-semibold cursor-pointer  hover:bg-blue-500 transition duration-300">
-        VIEW ALL COURSES →
-        </button>
-        </a> 
-        </div>
+      </div>
 
     </div>
 
@@ -459,20 +124,20 @@ function Course(){
 
 
 
-
-
-
-    <div className="bg-sky-100 w-full h-[700px] pt-[80px] mt-20">
+    <div className="bg-sky-100 w-full h-auto pt-5 lg:pt-8 lg:mt-10">
     
-          <div className="text-center h-[100px] w-full"> 
-                <p className="text-lg font-semibold text-orange-500 "> Team Members </p>
-                <h1 className="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Expert Instructors</h1>
-          </div>
-    
-          
-    
-         <div className= "w-[95%] flex items-center justify-center flex-wrap mx-auto mt-8 gap-8">  
+        <div className="text-center h-[50px] lg:h-[100px] w-full"> 
+            <p className="text-md lg:text-lg font-semibold text-orange-500 "> Team Members </p>
+            <h1 className="pt-0 lg:pt-2 text-2xl lg:text-5xl font-bold text-[#062a35] tracking-wide ">Expert Instructors</h1>
+      </div>
 
+     
+
+     <div className= "w-[95%] mx-auto mt-6 px-2 md:px-0 gap-8">  
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  md:justify-between gap-y-5 ">
+
+        
       {professor.map((item)=>{
 
         return(
@@ -513,6 +178,7 @@ function Course(){
         )    
       })}
 
+      </div>
 
     </div>
     
@@ -521,123 +187,132 @@ function Course(){
 
 
 
-     <div class="text-center h-[100px] w-full mt-20">
+    <div class="text-center h-[50px] lg:h-[100px] w-full mt-15">
     <p class="text-lg font-semibold text-orange-500 "> Artices & Tipes </p>
-    <h1 class="pt-2 text-5xl font-bold text-[#062a35] tracking-wide ">Latest News & Blog</h1>
+    <h1 class=" text-2xl lg:text-5xl font-bold text-[#062a35] tracking-wide ">Latest News & Blog</h1>
+    </div>        
+
+
+<div className="w-full min-h-[650px] lg:h-[750px] flex flex-col lg:flex-row items-center gap-8 justify-center mt-8">
+
+      <div className="lg:w-[28%] w-full p-3"> 
+
+        <a href="/blog">
+        <img src="/bimg3.jpg"  class="w-full h-[250px] lg:h-[350px] object-cover hover:-translate-y-2 transition-all duration-300  cursor-pointer"/>
+        </a>
+
+        <div className="border border-gray-300">
+
+          <div className="flex items-center gap-4 pl-7 pt-4">
+           <div className="flex items-center gap-3">
+              <FaRegCalendarAlt className="text-orange-500 lg:text-xl text-lg"/>
+              <p className="text-sm lg:text-md font-semibold text-gray-500">7 JUNE 2026</p>
+           </div>
+
+           <div className="flex items-center gap-3">
+              <FaRegComments className="text-orange-500 text-xl"/>
+              <p className="text-md font-semibold text-gray-500">COM(30)</p>
+           </div>
+          </div>
+
+          <h2 className="lg:text-xl text-lg font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog">Learning Resources In Challenec Times Online Workshops </a> </h2>
+
+          <div className="flex items-center gap-3 pl-7 mt-5">
+             <img src="/g.png" alt="" /> 
+             <p className="text-md lg:text-lg font-semibold text-orange-600">Pooja Sharma</p>
+          </div>
+
+          <a href="/blog">
+          <button className="w-[60px] h-[50px] lg:w-[70px] lg:h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="lg:text-2xl text-xl text-white mx-auto lg:mt-5 mt-4"/>
+          </button>
+          </a>
+        </div>
+
+      </div>
+
+
+       <div className="lg:w-[28%] w-full p-3"> 
+
+        <a href="/blog">
+        <img src="/bimg2.jpg"  class="w-full h-[250px] lg:h-[350px] hover:-translate-y-2 transition-all duration-300 object-cover cursor-pointer"/>
+        </a>
+
+        <div className="border border-gray-300">
+
+          <div className="flex items-center gap-4 pl-7 pt-4">
+           <div className="flex items-center gap-3">
+              <FaRegCalendarAlt className="text-orange-500 lg:text-xl text-lg"/>
+              <p className="text-sm lg:text-md font-semibold text-gray-500">7 JUNE 2026</p>
+           </div>
+
+           <div className="flex items-center gap-3">
+              <FaRegComments className="text-orange-500 text-xl"/>
+              <p className="text-md font-semibold text-gray-500">COM(30)</p>
+           </div>
+          </div>
+
+          <h2 className="lg:text-xl text-lg font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog"> Djang Models Admin And Harness Rela Tional Database </a></h2>
+
+          <div className="flex items-center gap-3 pl-7 mt-5">
+             <img src="/g.png" alt="" /> 
+             <p className="lg:text-lg text-sm font-semibold text-orange-600">Aaditay Sharma</p>
+          </div>
+
+          <a href="/blog">
+          <button className="lg:w-[70px] lg:h-[60px] w-[60px] h-[50px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="lg:text-2xl text-xl text-white mx-auto mt-4 lg:mt-5"/>
+          </button>
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+       <div className="lg:w-[28%] w-full p-3"> 
+
+        <a href="/blog">
+        <img src="/bimg1.jpg"  className="w-full h-[250px] lg:h-[350px] hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
+        </a>
+        <div className="border border-gray-300">
+
+          <div className="flex items-center gap-4 pl-7 pt-4">
+           <div className="flex items-center gap-3">
+              <FaRegCalendarAlt className="text-orange-500 lg:text-xl text-lg"/>
+              <p className="lg:text-md text-sm font-semibold text-gray-500">7 JUNE 2026</p>
+           </div>
+
+           <div className="flex items-center gap-3">
+              <FaRegComments className="text-orange-500 lg:text-xl text-lg"/>
+              <p className="lg:text-md text-sm font-semibold text-gray-500">COM(30)</p>
+           </div>
+          </div>
+
+          <h2 className="lg:text-xl text-lg font-bold text-[#062a35] pt-3 pl-7 pr-5"><a href="/blog"> Smash Podcast With Laura Kalbag What Is Online Privacy</a></h2>
+
+          <div className="flex items-center gap-3 pl-7 mt-5">
+             <img src="/g.png" alt="" /> 
+             <p className="lg:text-lg text-sm font-semibold text-orange-600">karan</p>
+          </div>
+
+          <a href="/blog">
+          <button className="lg:w-[70px] lg:h-[60px] w-[60px] h-[50px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
+            <FaArrowRightLong className="lg:text-2xl text-xl text-white mx-auto lg:mt-5 mt-4"/>
+          </button>
+          </a>
+
+        </div>
+
+      </div>
+
     </div>        
 
 
 
-    <div className="w-full h-[750px] flex items-center gap-8 justify-center mt-8">
-    
-          <div className="w-[28%] "> 
-    
-            <img src="/bimg3.jpg"  class="hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
-    
-            <div className="border border-gray-300">
-    
-              <div className="flex items-center gap-4 pl-7 pt-4">
-               <div className="flex items-center gap-3">
-                  <FaRegCalendarAlt className="text-orange-500 text-xl"/>
-                  <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
-               </div>
-    
-               <div className="flex items-center gap-3">
-                  <FaRegComments className="text-orange-500 text-xl"/>
-                  <p className="text-md font-semibold text-gray-500">COM(30)</p>
-               </div>
-              </div>
-    
-              <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Learning Resources In Challenec Times Online Workshops</h2>
-    
-              <div className="flex items-center gap-3 pl-7 mt-5">
-                 <img src="/g.png" alt="" /> 
-                 <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
-              </div>
-    
-              <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
-                <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
-              </button>
-    
-            </div>
-    
-          </div>
-    
-    
-           <div className="w-[28%] "> 
-    
-            <img src="/bimg2.jpg"  class="hover:-translate-y-2 transition-all duration-300 object-cover cursor-pointer"/>
-    
-            <div className="border border-gray-300">
-    
-              <div className="flex items-center gap-4 pl-7 pt-4">
-               <div className="flex items-center gap-3">
-                  <FaRegCalendarAlt className="text-orange-500 text-xl"/>
-                  <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
-               </div>
-    
-               <div className="flex items-center gap-3">
-                  <FaRegComments className="text-orange-500 text-xl"/>
-                  <p className="text-md font-semibold text-gray-500">COM(30)</p>
-               </div>
-              </div>
-    
-              <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Djang Models Admin And Harness Rela Tional Database</h2>
-    
-              <div className="flex items-center gap-3 pl-7 mt-5">
-                 <img src="/g.png" alt="" /> 
-                 <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
-              </div>
-    
-              <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
-                <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
-              </button>
-    
-            </div>
-    
-          </div>
-    
-    
-    
-           <div className="w-[28%] "> 
-    
-            <img src="/bimg1.jpg"  class="hover:-translate-y-2 transition-all duration-300  object-cover cursor-pointer"/>
-    
-            <div className="border border-gray-300">
-    
-              <div className="flex items-center gap-4 pl-7 pt-4">
-               <div className="flex items-center gap-3">
-                  <FaRegCalendarAlt className="text-orange-500 text-xl"/>
-                  <p className="text-md font-semibold text-gray-500">7 JUNE 2026</p>
-               </div>
-    
-               <div className="flex items-center gap-3">
-                  <FaRegComments className="text-orange-500 text-xl"/>
-                  <p className="text-md font-semibold text-gray-500">COM(30)</p>
-               </div>
-              </div>
-    
-              <h2 className="text-2xl font-bold text-[#062a35] pt-3 pl-7 pr-5">Smash Podcast With Laura Kalbag What Is Online Privacy</h2>
-    
-              <div className="flex items-center gap-3 pl-7 mt-5">
-                 <img src="/g.png" alt="" /> 
-                 <p className="text-lg font-semibold text-orange-600">Pooja Sharma</p>
-              </div>
-    
-              <button className="w-[70px] h-[60px] bg-[#062a35] ml-auto flex hover:bg-orange-600 cursor-pointer">
-                <FaArrowRightLong className="text-2xl text-white mx-auto mt-5"/>
-              </button>
-    
-            </div>
-    
-          </div>
-    
-    </div>        
 
-
-
-
-    <div className=" h-[180px] bg-orange-700 pt-12 pl-12">
+    <div className=" lg:h-[180px] h-[100px] bg-orange-700 lg:pt-10 lg:pl-12 pt-5 pl-5">
         <Imgswiper/>
     </div>   
 

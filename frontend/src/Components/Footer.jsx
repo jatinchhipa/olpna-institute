@@ -222,7 +222,7 @@ function Footer(){
                 </div>   
 
         <div className="text-sm lg:text-lg w-[80%] lg:w-[90%] h-[50px] items-center justify-center flex bg-[#0b3b4a] mx-auto mt-5">
-            <p className="text-white">Copyright © 2020 BDevs All Rights Reserved.</p>
+            <p className="text-white">Copyright © 2026 BDevs All Rights Reserved.</p>
         </div>  
 
 

@@ -73,18 +73,18 @@ return(
        <Navbar/> 
 
     <div className="course-hero  flex flex-col justify-center items-center">
-        <h1 className="text-8xl text-white font-bold "> Instructor Details</h1>  
-        <p className="text-white text-2xl bold ">Home / Instructor Details</p>
+        <h1 className="lg:text-8xl text-4xl text-white font-bold "> Instructor Details</h1>  
+        <p className="text-white text-xl lg:text-2xl bold ">Home / Instructor Details</p>
     </div> 
 
 
 
      <div className="w-full bg-sky-100 min-h-[700px]">
-      <div className="w-[90%] mx-auto pt-20 flex gap-5 ">
+      <div className="w-[90%] mx-auto lg:pt-20 pt-10 flex flex-col lg:flex-row gap-5 ">
 
-        <div className="w-[35%] ">
+        <div className="lg:w-[35%] w-full ">
 
-            <img src={`http://localhost:9000/uploads/${professor.professorImg}`} alt={professor.professorImg}  className=" w-full min-h-[400px] object-cover"/>
+            <img src={`http://localhost:9000/uploads/${professor.professorImg}`} alt={professor.professorImg}  className=" lg:w-full lg:min-h-[400px] w-full   object-cover"/>
 
             <div className="w-full bg-white flex p-6 h-auto">
 
@@ -115,19 +115,19 @@ return(
         </div>   
 
 
-        <div className="w-[60%] bg-white  p-10">
-           <h1 className="text-[#062a35] text-3xl font-[700]">About Me</h1> 
+        <div className="w-full lg:w-[60%] bg-white  p-10">
+           <h1 className="text-[#062a35] text-2xl lg:text-3xl font-[700]">About Me</h1> 
 
-           <p className="text-gray-500 leading-7 text-[15px] pt-5">{professor.about}</p>
+           <p className="text-gray-500 lg:leading-7 text-[15px] lg:pt-5 pt-2">{professor.about}</p>
 
           <div className="flex gap-8 mt-8 justify-center">  
            <div className="flex flex-col">
-              <h1 className="text-4xl text-orange-500 font-bold">{courses}+</h1>
+              <h1 className="text-2xl lg:text-4xl text-orange-500 font-bold">{courses}+</h1>
               <p className="text-md text-gray-500">Saticfied Students</p>
             </div>
 
             <div className="flex flex-col ">
-              <h1 className="text-4xl text-orange-500 font-bold">{students}+</h1>
+              <h1 className="text-2xl lg:text-4xl text-orange-500 font-bold">{students}+</h1>
               <p className="text-md text-gray-500">Saticfied Students</p>
             </div>
           </div>  
@@ -141,14 +141,14 @@ return(
 
 
 
-    <div className="w-full bg-sky-100 min-h-[450px]">
-        <div className="w-[90%] mx-auto flex gap-5 min-h-[400px]">
+    <div className="w-full bg-sky-100 min-h-[450px] lg:pb-5 pb-0">
+        <div className="w-[90%] mx-auto flex flex-col lg:flex-row gap-5 min-h-[400px] ">
 
-          <div className="w-[48%] bg-white p-12">
+          <div className="w-full lg:w-[48%] bg-white p-8 lg:p-12">
             <h1 className="text-[#062a35] text-2xl font-[700]">Certifications</h1>  
-            <p className="text-gray-500 text-[15px] leading-7 pt-5">{professor.certificate}</p>
+            <p className="text-gray-500 text-[15px] lg:leading-7 lg:pt-5 pt-3">{professor.certificate}</p>
 
-            <div className="flex items-center gap-5 mt-8">
+            <div className="flex items-center gap-3 lg:gap-8 mt-8">
                 <img src={`http://localhost:9000/uploads/${professor.certificateImg}`} alt={professor.certificateImg} />
                 
                 <img src="/c3.jpg" alt="" />
@@ -156,50 +156,50 @@ return(
 
           </div>     
 
-          <div className="w-[48%] bg-white p-12">
+          <div className="w-full lg:w-[48%] bg-white p-8 lg:p-12 mb-5 lg:mb-0">
 
-            <h1 className="text-[#062a35] text-2xl font-[700]">Educations</h1>
+            <h1 className="text-[#062a35] text-xl lg:text-2xl font-[700]">Educations</h1>
 
-            <div className="flex gap-8 mt-10">
+            <div className="flex gap-5 lg:gap-8 lg:mt-10 mt-5">
                 
-               <div className="flex gap-5">
+               <div className="flex gap-3 lg:gap-5 w-1/2">
                    <PiStudentThin  className="text-5xl text-orange-500"/>
 
                     <span>
-                        <h1 className="text-[#062a35] text-md font-bold">{professor.univercity}</h1>
-                        <p className="text-gray-500 pt-1">{professor.education}</p>
+                        <h1 className="text-[#062a35] text-sm lg:text-md font-bold">{professor.univercity}</h1>
+                        <p className="text-gray-500 text-sm  pt-1">{professor.education}</p>
                     </span>    
                </div>
 
-               <div className="flex gap-5">
+               <div className="flex gap-3 lg:gap-5 w-1/2">
                    <PiStudentThin  className="text-5xl text-orange-500"/>
 
                     <span>
-                        <h1 className="text-[#062a35] text-md font-bold">{professor.univercity}</h1>
+                        <h1 className="text-[#062a35] text-sm lg:text-md font-bold">{professor.univercity}</h1>
                         <p className="text-gray-500 pt-1">{professor.education}</p>
                     </span>    
                </div>
 
             </div>
 
-            <h1 className="text-[#062a35] text-2xl font-[700] pt-8">Experience</h1>
+            <h1 className="text-[#062a35] text-xl lg:text-2xl font-[700] pt-8">Experience</h1>
 
-            <div className="flex gap-8 mt-10">
+            <div className="flex gap-5 lg:gap-8 lg:mt-10 mt-5">
                 
-               <div className="flex gap-5">
+               <div className="flex gap-3 lg:gap-5 w-1/2">
                    <PiStudentThin  className="text-5xl text-orange-500"/>
 
                     <span>
-                        <h1 className="text-[#062a35] text-md font-bold">{professor.experience}</h1>
+                        <h1 className="text-[#062a35] text-sm lg:text-md font-bold">{professor.experience}</h1>
                         <p className="text-gray-500 pt-1">{professor.experienceUrl}</p>
                     </span>    
                </div>
 
-               <div className="flex gap-5">
+               <div className="flex gap-3 lg:gap-5 w-1/2">
                    <PiStudentThin  className="text-5xl text-orange-500"/>
 
                     <span>
-                        <h1 className="text-[#062a35] text-md font-bold">{professor.experience}</h1>
+                        <h1 className="text-[#062a35] text-sm lg:text-md font-bold">{professor.experience}</h1>
                         <p className="text-gray-500 pt-1">{professor.experienceUrl}</p>
                     </span>    
                </div>
@@ -212,21 +212,19 @@ return(
     </div>
 
 
-    <div className="mt-20">
+    <div className="mt-10 lg:mt-20">
 
-          <h1 className="text-[#062a35] text-center text-3xl font-bold ">Popular Course</h1>   
+          <h1 className="text-[#062a35] text-center text-xl lg:text-3xl font-bold ">Popular Course</h1>   
 
         <div className= "w-[90%] flex items-center justify-center flex-wrap mx-auto mt-8  gap-8">
-
            
-        
                 <div className="course-card">
         
                   <div className="course-img">
                     <img src="/coursec1.jpg"/>
                   </div>
         
-                  <div className=" p-5 h-[200px] h-[200px]">
+                  <div className=" p-5 lg:h-[200px] h-[180px]">
         
                     <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
         
@@ -291,7 +289,7 @@ return(
                     <img src="/coursec2.jpg"/>
                   </div>
         
-                  <div className=" p-5 h-[200px]">
+                  <div className="lg:h-[200px] h-[180px] p-5">
         
                     <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
         
@@ -359,7 +357,7 @@ return(
                     <img src="/coursec3.jpg"/>
                   </div>
         
-                  <div className=" p-5 h-[200px]">
+                  <div className=" lg:h-[200px] h-[180px] p-5">
         
                     <button className="text-sm p-1 border rounded text-white font-semibold bg-sky-700">English</button>
         
@@ -422,12 +420,11 @@ return(
 
     </div>
 
+ 
 
-
-    <div className="mt-20 h-[180px] bg-orange-700 pt-12 pl-12">
-        <Imgswiper/>
-    </div>  
-
+    <div className="lg:mt-20 mt-10 lg:h-[180px] h-[100px] bg-orange-700 lg:pt-10 lg:pl-12 pt-5 pl-5">
+            <Imgswiper/>
+    </div>
 
 <Footer/>
 
